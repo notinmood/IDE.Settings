@@ -50,6 +50,7 @@ Return
 :*:>::{text}>
 :*:(::{text}(
 :*:)::{text})
+;;;:*:、::{text}/
 
 #IfWinActivet
 
@@ -2126,6 +2127,8 @@ return
 
 ;;关闭当前应用程序,改为alt+esc
 !esc::!f4
+;;关闭当前窗口(如果一个app有多个打开的窗口的话,就是关闭当前使用中的一个)
+!w::^w
 
 
 ;;修复z键，(因为键盘键位z坏了--点击一次z经常出现多个z，现在进行修复)
@@ -2185,6 +2188,11 @@ $!s:: ;保存
 	Send, ^s
 	sleep,400
 	send, {esc}
+return
+
+;;格式刷
+$#f::
+	Send,^+c
 return
 
 
@@ -2349,19 +2357,19 @@ return
 {
 	F1:: ;标题重映射
 		Send,^!1
-		Send,!hu2{end}{up}{up}{up}{up}{left}{left}{left}{enter}
+		Send,!hul{end}{up}{up}{up}{up}{left}{left}{left}{enter}
 		return
 	F2:: ;标题重映射
 		Send,^!2
-		Send,!hu2{end}{up}{up}{left}{left}{left}{enter}
+		Send,!hul{end}{up}{up}{left}{left}{left}{enter}
 		return
 	F3:: ;标题重映射
 		Send,^!3
-		Send,!hu2{end}{up}{up}{up}{left}{left}{left}{enter}
+		Send,!hul{end}{up}{up}{up}{left}{left}{left}{enter}
 		return
 	F4:: ;带修饰符的正文
 		Send,^+n
-		Send,!hu2{end}{up}{left}{left}{left}{enter}
+		Send,!hul{end}{up}{left}{left}{left}{enter}
 		return
 	F5:: ;标题1,汉字序号重映射
 		Send,^!1
@@ -2375,9 +2383,9 @@ return
 		Send,^!3
 		Send,!hn{home}{down}{down}{enter}
 		return
-	F8:: ;带英文小写序号的正文，
-		Send,^+n
-		Send,!hn{home}{down}{right}{right}{right}{right}{enter}
+	F8:: ;突出显示，
+		Send,!hi{home}{down}{down}{right}{right}{right}{enter}
+		;Send,!hfc{home}{down}{down}{down}{down}{enter}
 		return
 	F9:: ;标题重映射
 		MyPressKeyMany("press_1_f9_event","press_2_f9_event","press_2_f9_event")		
@@ -2386,15 +2394,15 @@ return
 		press_1_f9_event(){
 			global __f9_pressed_count
 			if(__f9_pressed_count="" or __f9_pressed_count=1)	{
-				Send,!hu2{end}{up}{up}{up}{left}{left}{enter}
+				Send,!hul{end}{up}{up}{up}{left}{left}{enter}
 			}
 
 			if(__f9_pressed_count=2)	{
-				Send,!hu2{home}{down}{down}{down}{enter}
+				Send,!hul{home}{down}{down}{down}{enter}
 			}
 
 			if(__f9_pressed_count=3)	{
-				Send,!hu2{home}{down}{down}{right}{enter}
+				Send,!hul{home}{down}{down}{right}{enter}
 			}
 		}
 
@@ -2421,6 +2429,16 @@ return
 		click right
 		Send,ah{down}{right}{down}{enter}
 		return
+
+	PrintScreen & F11:: ;用表格格式化信息
+		Send,!nt{enter}	
+		
+		click right
+		Send,ah{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{up}{enter}
+		click right
+		Send,ah{down}{right}{home}{down}{right}{right}{right}{right}{right}{right}{enter}
+		return
+
 	F12:: ;代码格式化
 		Send,!yc
 		return
@@ -2517,10 +2535,17 @@ return
 	
 
 	;【2】将 ... 替换为 -> 符号
-	:*:...::
-	;SendInput {-}{>}
-	Send, ->
+	;:*:...:: ;;新版本phpstorm对.符号进行了特别处理,本热字符串转换失效,请使用,,
+	;;SendInput {-}{>}
+	;Send,->
+	;return	
+
+	;【3】注释符号的替换
+	:*:///:: ;;将///注释转换成/**注释
+	SendInput {text} /**
+	Send,{enter}
 	return	
+
 }
 #IfWinActive
 
@@ -2550,37 +2575,27 @@ Return
 Return
 
 ;;快速输入 段落分隔符
-:*:----:: ;8个长度差不多占比手机屏幕全长
-	Send,————————————————
+:*:---:: ;8个长度差不多占比手机屏幕全长
+	Send,────────────────────────
 Return
+
+:*:===:: ;8个长度差不多占比手机屏幕全长
+	Send,════════════════════════
+Return
+
+:*:,,,:: ;8个长度差不多占比手机屏幕全长
+	Send,┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+Return
+
 
 ;【1】将 sss替换为 ${} 符号
 :*:sss::
-SendInput, {text} ${}
-send, {left}
+	SendInput, {text} ${}
+	send, {left}
 return
 
-;;;常用的汉字标点到英文标点的统一映射
-:*:90;::{text}()
-; :*:()::{text}()
-:*://::{text}//
-:*:"::{text}"
-:*:'::{text}'
-:*:[::{text}[
-:*:]::{text}]
-:*:%::{text}%
-:*:$::{text}$
-:*:&::{text}&
 
-;代码需要用英文的分号结尾。但中文输入法的分号是不可以的，
-;如果是中文输入模式下，就把分号+\\，转换成一个英文的分号
-:*:;::{text};
-;把逗号转成一个英文的逗号
-:*:,::{text},
-;把中文的句号转成一个英文的句号
-:*:.::{text}.
-
-:*:\\::{text}\\
+:*:\\\\::{text}\\
 
 ;VK05::MsgBox,hi china
 

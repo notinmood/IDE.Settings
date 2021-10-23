@@ -2119,7 +2119,8 @@ return
 return
 
 ;;;有时候，一手握着鼠标，另一只手ctrl+c，ctrl+v，这时候想按下换行手还要移动很远，去按enter键很麻烦.索性把CapsLock键换成enter键。
-$CapsLock::Enter
+;;;把CapsLock转成End键,在写代码的时候更常用.
+$CapsLock::End
 
 $!f4:: 
 	
@@ -2337,6 +2338,24 @@ return
 
 	;【2】将 Alt+↓ 映射查找结果集的下一条h
 	!down::send,^g
+
+	;;;将F6设置为新建tab
+	F6::Send,^t
+	;;;将F4设置为关闭tab
+	F4::Send,^w
+
+	;;; 将鼠标双击改为点击中键(在标签上点击中键是关闭标签的意思)
+	LButton::MyPressKeyMany("mb_1_event","mb_2_event","mb_3_event")	
+	
+	;;;单击的时候，还是走原来的逻辑
+	mb_1_event(){
+		MouseClick,left
+	}
+
+	;;双击改成中键
+	mb_2_event(){
+		MouseClick,Middle
+	}
 }
 #IfWinActive
 
@@ -2457,7 +2476,11 @@ return
 			Send,!sea
 		}
 
-
+	+v:: ;普通文本格式粘贴信息		
+		;Send,!hvt
+		click right
+		Send, t
+		return
 	#f:: ;格式刷
 		Send,!hfp
 		;Send,!hfp
@@ -2541,6 +2564,21 @@ return
 	;return	
 
 	;【3】注释符号的替换
+	:*:///:: ;;将///注释转换成/**注释
+	SendInput {text} /**
+	Send,{enter}
+	return	
+
+	;;;将win+f替换为文件全局格式化
+	#f::send,!+^l
+
+}
+#IfWinActive
+
+;在开发环境phpstorm中的映射
+#IfWinActive ahk_exe webstorm64.exe
+{
+	;【1】注释符号的替换
 	:*:///:: ;;将///注释转换成/**注释
 	SendInput {text} /**
 	Send,{enter}
@@ -2677,7 +2715,7 @@ MyPressKeyMany(press1Event,press2Event="",press3Event="",timer=500){
 			}
 		}
 	 
-		; 在结束后，还需要将鼠标右键的按键次数置为0，以方便下次使用
+		; 在结束后，还需要将按键次数置为0，以方便下次使用
 	 
 		gnPressCount := 0 
 		Return

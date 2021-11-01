@@ -2133,7 +2133,7 @@ return
 
 
 ;;修复z键，(因为键盘键位z坏了--点击一次z经常出现多个z，现在进行修复)
-;$z::MyPressKeyMany("filter_z","filter_z","filter_z",120)
+;$z::PressKeyManyTimes("filter_z","filter_z","filter_z",120)
 
 filter_z(){
 	send,{z}
@@ -2141,8 +2141,8 @@ filter_z(){
 
 ;;左边Alt是将中文标点符号转换为英文标点符号;右Alt是将英文标点符号替换为中文标点符号
 ;;Alt双击是替换刚才输入的最后一个标点符号;Alt三连击是替换光标所在整个行内的标点符号
-~Lalt::MyPressKeyMany("lalt_event_kp1","lalt_event_kp2","lalt_event_kp3")
-~Ralt::MyPressKeyMany("ralt_event_kp1","ralt_event_kp2","ralt_event_kp3")
+~Lalt::PressKeyManyTimes("lalt_event_kp1","lalt_event_kp2","lalt_event_kp3")
+~Ralt::PressKeyManyTimes("ralt_event_kp1","ralt_event_kp2","ralt_event_kp3")
 
 ;GetMarker_CN_EN := "。，；？"
 
@@ -2183,13 +2183,13 @@ ralt_event_kp3(){
 }
 
 
-
+;;这个功能暂时通过powertoy实现。否则停止下列代码的注释
 ;;由于Ctrl+s 操作起来不方便，将Alt+s映射到Ctrl+s
-$!s:: ;保存
-	Send, ^s
-	sleep,400
-	send, {esc}
-return
+;$!s:: ;保存
+;	Send, ^s
+;	sleep,400
+;	send, {esc}
+;return
 
 ;;格式刷
 $#f::
@@ -2197,14 +2197,76 @@ $#f::
 return
 
 
-
+;;;以下方向键重定义，使用space方案代替alt方案。暂时注释。
 ;;;以下内容为方向键重定义
-$!i::Send {Up} 
-$!k::Send {Down}
-$!j::Send {Left}
-$!l::Send {Right}
-$!h::Send {Home}
-$!;::Send {End}
+;$!i::Send {Up} 
+;$!k::Send {Down}
+;$!j::Send {Left}
+;$!l::Send {Right}
+;$!h::Send {Home}
+;$!;::Send {End}
+
+;;;重置Space按键  ***  space
+space::Send {space}
+
+^space::Send ^{space}
+#space::Send #{space}
+^#space::Send ^#{space}
+!space::Send !{space}
+^!space::Send ^!{space}
+
+;  *** space + Num
+space & 1::Send {space}
+space & 2::Send {space}{space}
+space & 3::Send {space}{space}{space}
+space & 4::Send {space}{space}{space}{space}
+space & 5::Send {space}{space}{space}{space}{space}
+space & 6::Send {space}{space}{space}{space}{space}{space}
+space & 7::Send {space}{space}{space}{space}{space}{space}{space}
+space & 8::Send {space}{space}{space}{space}{space}{space}{space}{space}
+space & 9::Send {space}{space}{space}{space}{space}{space}{space}{space}{space}
+
+
+;  *** space + [] (windows virual desktop switcher)
+space & [::Send ^#{left}
+space & ]::Send ^#{right}
+
+;  *** space + XX
+#if GetKeyState("space", "P")
+f & i:: Send +{up}
+f & j:: Send +{left}     
+f & k:: Send +{down}
+f & l:: Send +{right}
+d & i:: Send ^{up}
+d & j:: Send ^{left}
+d & k:: Send ^{down}
+d & l:: Send ^{right}
+;g & i:: Send ^+{up} 
+g & j:: Send ^+{left}
+;g & k:: Send ^+{down}
+g & l:: Send ^+{right}
+
+i:: Send {up}
+j:: Send {left}
+k:: Send {down}
+l:: Send {right}
+h:: Send {home}
+n:: Send {end}
+,:: Send {Pgup}
+.:: Send {Pgdn}
+
+b::Send,{backspace}
+d::Send,{del}
+
+c:: Send ^c
+x:: Send ^x
+v:: Send ^v
+z:: Send ^z
+
+return
+;;;重置Space按键结束  ***  space
+
+
 
 
 ;输入法搜狗，切换方式
@@ -2342,20 +2404,31 @@ return
 	;;;将F6设置为新建tab
 	F6::Send,^t
 	;;;将F4设置为关闭tab
-	F4::Send,^w
+	;F4::Send,^w
 
-	;;; 将鼠标双击改为点击中键(在标签上点击中键是关闭标签的意思)
-	LButton::MyPressKeyMany("mb_1_event","mb_2_event","mb_3_event")	
-	
-	;;;单击的时候，还是走原来的逻辑
-	mb_1_event(){
-		MouseClick,left
-	}
+	;;;将双击esc设置为关闭tab
+	~esc::
+		PressKeyManyTimes("press_1_esc_event4edge","press_2_esc_event4edge","press_2_esc_event4edge",400)		
+		return
 
-	;;双击改成中键
-	mb_2_event(){
-		MouseClick,Middle
-	}
+		press_1_esc_event4edge()
+		{
+			send,{esc}
+		}
+
+		press_2_esc_event4edge()
+		{
+			Send,^w
+		}
+
+	;;;双击左键关闭当前tab
+	;LButton::
+	;If (A_PriorHotkey=A_ThisHotkey) and (A_TimeSincePriorHotkey<300)
+	;{
+	;	;send, ^w
+	;	MouseClick,Middle
+	;}
+	return
 }
 #IfWinActive
 
@@ -2374,26 +2447,17 @@ return
 ;如果是在onenote中，就映射F系列快捷键
 #IfWinActive ahk_exe ONENOTE.EXE
 {
-	F1:: ;标题重映射
+	F1::
+	F4:: ;标题重映射
 		Send,^!1
 		Send,!hul{end}{up}{up}{up}{up}{left}{left}{left}{enter}
 		return
-	F2:: ;标题重映射
-		Send,^!2
-		Send,!hul{end}{up}{up}{left}{left}{left}{enter}
-		return
-	F3:: ;标题重映射
-		Send,^!3
-		Send,!hul{end}{up}{up}{up}{left}{left}{left}{enter}
-		return
-	F4:: ;带修饰符的正文
+	F5:: ;带修饰符的正文
 		Send,^+n
 		Send,!hul{end}{up}{left}{left}{left}{enter}
 		return
-	F5:: ;标题1,汉字序号重映射
-		Send,^!1
-		Send,!hn{home}{down}{down}{right}{right}{right}{enter}
-		return
+	
+
 	F6:: ;标题2，阿拉伯数字序号重映射
 		Send,^!2
 		Send,!hn{home}{down}{right}{right}{enter}
@@ -2402,54 +2466,70 @@ return
 		Send,^!3
 		Send,!hn{home}{down}{down}{enter}
 		return
-	F8:: ;突出显示，
-		Send,!hi{home}{down}{down}{right}{right}{right}{enter}
-		;Send,!hfc{home}{down}{down}{down}{down}{enter}
-		return
-	F9:: ;标题重映射
-		MyPressKeyMany("press_1_f9_event","press_2_f9_event","press_2_f9_event")		
-		return
+	
+	;;;把不常用的都屏蔽掉
+	;F2:: ;标题重映射
+	;	Send,^!2
+	;	Send,!hul{end}{up}{up}{left}{left}{left}{enter}
+	;	return
+	;F3:: ;标题重映射
+	;	Send,^!3
+	;	Send,!hul{end}{up}{up}{up}{left}{left}{left}{enter}
+	;	return
 
-		press_1_f9_event(){
-			global __f9_pressed_count
-			if(__f9_pressed_count="" or __f9_pressed_count=1)	{
-				Send,!hul{end}{up}{up}{up}{left}{left}{enter}
-			}
+	;F5:: ;标题1,汉字序号重映射
+	;	Send,^!1
+	;	Send,!hn{home}{down}{down}{right}{right}{right}{enter}
+	;	return
 
-			if(__f9_pressed_count=2)	{
-				Send,!hul{home}{down}{down}{down}{enter}
-			}
+;	F8:: ;突出显示，
+;		Send,!hi{home}{down}{down}{right}{right}{right}{enter}
+;		;Send,!hfc{home}{down}{down}{down}{down}{enter}
+;		return
+;	F9:: ;标题重映射
+;		PressKeyManyTimes("press_1_f9_event","press_2_f9_event","press_2_f9_event")		
+;		return
+;
+;		press_1_f9_event(){
+;			global __f9_pressed_count
+;			if(__f9_pressed_count="" or __f9_pressed_count=1)	{
+;				Send,!hul{end}{up}{up}{up}{left}{left}{enter}
+;			}
+;
+;			if(__f9_pressed_count=2)	{
+;				Send,!hul{home}{down}{down}{down}{enter}
+;			}
+;
+;			if(__f9_pressed_count=3)	{
+;				Send,!hul{home}{down}{down}{right}{enter}
+;			}
+;		}
+;
+;		press_2_f9_event(){
+;			global __f9_pressed_count
+;			if(__f9_pressed_count>=3){
+;				__f9_pressed_count:=1
+;			}else{
+;				__f9_pressed_count++
+;			}
+;
+;			MsgBox,0,,% "当前用的标注号为:"__f9_pressed_count,1
+;
+;		}
 
-			if(__f9_pressed_count=3)	{
-				Send,!hul{home}{down}{down}{right}{enter}
-			}
-		}
-
-		press_2_f9_event(){
-			global __f9_pressed_count
-			if(__f9_pressed_count>=3){
-				__f9_pressed_count:=1
-			}else{
-				__f9_pressed_count++
-			}
-
-			MsgBox,0,,% "当前用的标注号为:"__f9_pressed_count,1
-
-		}
 
 
-
-	F10:: ;清除所有的格式
+	F8:: ;清除所有的格式
 		Send,^+n
 		return
-	F11:: ;用表格格式化信息
+	F9:: ;用表格格式化信息
 		Send,!nt{enter}	
 		;Send,^i
 		click right
 		Send,ah{down}{right}{down}{enter}
 		return
 
-	PrintScreen & F11:: ;用表格格式化信息
+	PrintScreen & F9:: ;用表格格式化信息
 		Send,!nt{enter}	
 		
 		click right
@@ -2463,7 +2543,7 @@ return
 		return
 
 	~esc:: ;调用历史面板
-		MyPressKeyMany("press_1_esc_event","press_2_esc_event","press_2_esc_event",300)		
+		PressKeyManyTimes("press_1_esc_event","press_2_esc_event","press_2_esc_event",300)		
 		return
 
 		press_1_esc_event()
@@ -2476,10 +2556,11 @@ return
 			Send,!sea
 		}
 
-	+v:: ;普通文本格式粘贴信息		
+	;普通文本格式粘贴信息
+	^b::		
 		;Send,!hvt
 		click right
-		Send, t
+		Send, {down}{down}{down}{right}{right}{enter}
 		return
 	#f:: ;格式刷
 		Send,!hfp
@@ -2516,30 +2597,12 @@ return
 }   
 #IfWinActive
 
-
-
-;在uwp的onenote中
-#IfWinActive ahk_exe ApplicationFrameHost.exe
+;;;在onenote打开的代码高亮插件中
+#IfWinActive ahk_exe DllHost.exe
 {
-	F1:: ;标题重映射
-		Send,^!1
-		return
-	F2:: ;标题重映射
-		Send,^!2
-		return
-	F3:: ;标题重映射
-		Send,^!3
-		return
-	F4:: ;正文
-		Send,^+n
-		return
-
-	F10:: ;清除格式
-		Send,^+n
-		return
+	;;;用esc调用alt+f4关闭窗口
+	esc::send,!{f4}
 }
-#IfWinActive
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;热字符串
@@ -2571,6 +2634,21 @@ return
 
 	;;;将win+f替换为文件全局格式化
 	#f::send,!+^l
+
+	;;;将双击esc设置为关闭tab
+	~esc::
+	PressKeyManyTimes("press_1_esc_event4jb","press_2_esc_event4jb","press_2_esc_event4jb",300)		
+	return
+
+	press_1_esc_event4jb()
+	{
+		send,{esc}
+	}
+
+	press_2_esc_event4jb()
+	{
+		Send,^{f4}
+	}
 
 }
 #IfWinActive
@@ -2665,7 +2743,7 @@ rbutton::
 ;AHK多次按下某个键通用的处理函数。以下是通用的被调用部分。
 ;其中press1Event,press2Event,press3Event是处理点击、双击、三击的子函数
 ;（使用的时候，用双引号直接传递这三个函数的名称）
-MyPressKeyMany(press1Event,press2Event="",press3Event="",timer=500){
+PressKeyManyTimes(press1Event,press2Event="",press3Event="",timer=500){
 	global gnPressCount += 1 
 
         If gnPressCount = 1 
@@ -2826,8 +2904,8 @@ longPressEvent(){
 
 
 
-;$space::MyPressKeyMany("pressCount_1_space","pressCount_2_space","pressCount_3_space")
-;$ctrl::MyPressKeyMany("pressCount_1_space","pressCount_2_space","pressCount_3_space")
+;$space::PressKeyManyTimes("pressCount_1_space","pressCount_2_space","pressCount_3_space")
+;$ctrl::PressKeyManyTimes("pressCount_1_space","pressCount_2_space","pressCount_3_space")
 
 pressCount_1_space()
 {

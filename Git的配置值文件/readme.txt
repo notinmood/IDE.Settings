@@ -1,0 +1,1 @@
+1、_netrc是git保持账号口令的文件，位于%HOMEPATH%目录下

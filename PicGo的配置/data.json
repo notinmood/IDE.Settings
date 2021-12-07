@@ -1,0 +1,95 @@
+{
+  "picBed": {
+    "current": "gitee",
+    "uploader": "gitee",
+    "smms": {
+      "token": ""
+    },
+    "gitee": {
+      "branch": "master",
+      "customPath": "",
+      "customUrl": "",
+      "path": "",
+      "repo": "xiedali/my-images",
+      "token": "2f4b91a64220b76836879e3a4b6cf461"
+    },
+    "github": {
+      "branch": "main",
+      "customUrl": "https://cdn.jsdelivr.net/gh/notinmood/mypictures",
+      "path": "",
+      "repo": "notinmood/mypictures",
+      "token": "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"
+    },
+    "list": [
+      {
+        "name": "SM.MS图床",
+        "type": "smms",
+        "visible": false
+      },
+      {
+        "name": "腾讯云COS",
+        "type": "tcyun",
+        "visible": false
+      },
+      {
+        "name": "GitHub图床",
+        "type": "github",
+        "visible": true
+      },
+      {
+        "name": "七牛图床",
+        "type": "qiniu",
+        "visible": false
+      },
+      {
+        "name": "Imgur图床",
+        "type": "imgur",
+        "visible": false
+      },
+      {
+        "name": "阿里云OSS",
+        "type": "aliyun",
+        "visible": false
+      },
+      {
+        "name": "又拍云图床",
+        "type": "upyun",
+        "visible": false
+      },
+      {
+        "name": "gitee",
+        "type": "gitee",
+        "visible": true
+      }
+    ]
+  },
+  "settings": {
+    "shortKey": {
+      "picgo:upload": {
+        "enable": true,
+        "key": "Alt+P",
+        "name": "upload",
+        "label": "快捷上传"
+      }
+    },
+    "server": {
+      "enable": true,
+      "host": "127.0.0.1",
+      "port": 36677
+    },
+    "privacyEnsure": true,
+    "showUpdateTip": true,
+    "autoRename": true,
+    "autoStart": false,
+    "pasteStyle": "URL"
+  },
+  "picgoPlugins": {
+    "picgo-plugin-gitee-uploader": true
+  },
+  "debug": true,
+  "PICGO_ENV": "GUI",
+  "needReload": false,
+  "picgo-plugin-gitee-uploader": {
+    "lastSync": "2021-12-06 11:58:54"
+  }
+}

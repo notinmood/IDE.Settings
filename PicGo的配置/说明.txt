@@ -1,0 +1,2 @@
+这两个文件的目标文件夹为
+C:\Users\Administrator\AppData\Roaming\picgo

@@ -1,0 +1,181 @@
+<application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="1bcsUstEB5vcKwf3cV56YRohcG2">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1eX0ZBzAUBKNZiOwhY7wLezWxCZ">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1muQ21shYQoja4X6UnX5PcttUsc">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1s6EFRzJ3Wn09fQ79kWUouF1wlo">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1sb9WNJrgeXZDGE0Z5eahJzbPPu">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1wNpatFZgGrXE4nGGNvKG1GJPlt">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1zzXtuRnaQSNedQ0HXACPGC0009">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="23Gayun4Usa7UYZB8lBxLjd1DDR">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="23OyPGFceju1kiBrFCe65SPXvRG">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="ProjectPluginTrackerManager">
+    <trackers>
+      <map>
+        <entry key="1mE6I53kRMsd6QexnzpVlDViLdV">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1s6EFRzJ3Wn09fQ79kWUouF1wlo">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1sZazckAncFrOSFOVC7opkT16CU">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1sb9WNJrgeXZDGE0Z5eahJzbPPu">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1wNpatFZgGrXE4nGGNvKG1GJPlt">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1znwugmQ0gDC1MteBeW7dJwrVuY">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1ztRfa8CbDAbeSdjE8D0AAIDboA">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1zvwNLOrx8YeHhIMIP3qIlIFZ0I">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1zw2j3lFR3va6ZK1gjZTk6lzbTc">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1zw3VSpVZL6bh9wVyhytDw4Y5l3">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="1zzXtuRnaQSNedQ0HXACPGC0009">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DBE.Default.Dialect" value="GenericSQL" />
+    <property name="ExpandBeforeRunStepsPanel" value="true" />
+    <property name="ExternalToolDialog.advanced.expanded" value="true" />
+    <property name="FileTemplates.SelectedTemplate" value="PHP File" />
+    <property name="FindSplitterProportion" value="0.32959184" />
+    <property name="INSPECTION_FILTER_HISTORY" value="默认值&#10;匹配&#10;形参" />
+    <property name="InstalledPluginsSearchHistory" value="ace&#10;ac&#10;api&#10;ApiDebugger&#10;alt" />
+    <property name="KEYMAP" value="ace&#10;前进&#10;alt&#10;rename&#10;import" />
+    <property name="LayoutCode.codeCleanup" value="true" />
+    <property name="LayoutCode.optimizeImports" value="false" />
+    <property name="LayoutCode.processChangedText" value="false" />
+    <property name="LayoutCode.rearrangeEntriesPHP" value="false" />
+    <property name="MarketplacePluginsSearchHistory" value="symfony&#10;api&#10;a&#10;Debugger&#10;ADebugger" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="PhpStorm.InitialConfiguration" value="true" />
+    <property name="PhpUnit.Splitter.Proportion" value="0.49119717" />
+    <property name="PhpUnitSupport.hideIgnoredTests" value="false" />
+    <property name="PhpUnitSupport.hidePassedTests" value="false" />
+    <property name="PhpUnitSupport.sortTestsAlphabetically" value="true" />
+    <property name="PhpUnitSupport.sortTestsByDuration" value="false" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
+    <property name="SettingsSearchHistory" value="尾&#10;ace&#10;前进&#10;d&#10;alt" />
+    <property name="TextEditorWithPreview.SplitterProportionKey" value="0.59484345" />
+    <property name="appcds.runOnSecondStart" value="PS-213.6777.58-f66f710f5275cb2679c4efa0245f6c65049a04986f4dd5e321767363cfefe25e" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="bundled.plugins.list.saved.version" value="PS-213.6777.58" />
+    <property name="disable.forced.soft.wraps.notification" value="true" />
+    <property name="evlsprt3.213" value="5" />
+    <property name="export.settings.path" value="E:\Documents\AppSettings\PHPStorm.settings.my.zip" />
+    <property name="file.chooser.recent.files" value="E:/Documents/AppSettings&#10;E:/myworkspace/Project-php/rainytop-web&#10;E:/myworkspace/Project-php/FoxLove/Server&#10;E:/myworkspace/Project-php/AnLian/Server/anlianproject&#10;E:/myworkspace/MyConsole&#10;E:/myworkspace/BasiceLibrary.PHP/Utils&#10;D:/php-8.0.11/php.exe&#10;D:/tools/develope/PHPUnit/phpunit-9.5.8.phar&#10;E:/myworkspace/BasiceLibrary.PHP&#10;E:/OpenSource/PHP/thinkPHP/MyConsole&#10;E:/myworkspace/Project-php/office&#10;C:/composer/composer.phar&#10;E:/OpenSource/PHP/thinkPHP/lastThinkPHP&#10;E:/OpenSource/PHP/thinkPHP/My&#10;E:/myworkspace/MyStudy&#10;E:/OpenSource/PHP/thinkPHP/MySelf&#10;E:/OpenSource/PHP/think&#10;E:/myworkspace/Project-php/diyipingce&#10;E:/myworkspace/BasiceLibary.PHP&#10;C:/Users/易破解/Downloads/Compressed/zh.212.324.zip&#10;D:/php-7.4.16/php.exe&#10;E:/myworkspace/MyStudy/PHP" />
+    <property name="file.gist.reindex.count" value="1024" />
+    <property name="fileTypeChangedCounter" value="9" />
+    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.docker.dockerFile.DockerFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector:com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
+    <property name="got.it.tooltip.builtin.web.server.reload.on.save" value="1" />
+    <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="got.it.tooltip.database.schema.control.got.it" value="1" />
+    <property name="got.it.tooltip.reader.mode.got.it" value="1" />
+    <property name="got.it.tooltip.web.preview.reload.on.save" value="1" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="ide.updates.previous.build.number" value="PS-212.5457.49" />
+    <property name="ide.updates.whats.new.shown.for" value="212" />
+    <property name="js.extract.function.global.scope.was.selected" value="true" />
+    <property name="js.rename.search.for.text.occurrences" value="false" />
+    <property name="js.rename.search.in.comments" value="false" />
+    <property name="last_opened_file_path" value="E:/Documents/AppSettings" />
+    <property name="log.trace.categories" value="#com.jetbrains.rdserver.requests&#10;#com.jetbrains.rd.ide.document&#10;#com.jetbrains.rdserver.document&#10;#com.jetbrains.rdserver.editors&#10;#com.jetbrains.rdserver.actions&#10;#com.jetbrains.rdserver.permissions" />
+    <property name="org.jetbrains.erlang.LAST_UPDATE" value="1635042485272" />
+    <property name="org.jetbrains.erlang.LAST_VERSION" value="0.11.1118" />
+    <property name="osmedile.intellij.stringmanip.MyApplicationService.lastAction" value="osmedile.intellij.stringmanip.styles.ToCamelCaseAction" />
+    <property name="php.embedded.stubs.notification.provider.do.not.show.again.property" value="true" />
+    <property name="plugins.preselection.path" value="C:/Users/易破解/Downloads/Compressed" />
+    <property name="registry.to.advanced.settings.migration.build" value="PS-213.6777.58" />
+    <property name="selected.color.option.type" value="IGNORE.BRACKET" />
+    <property name="settings.code.style.selected.tab.PHP" value="换行和大括号" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="4.5.4" />
+  </component>
+  <component name="TerminalCommandHistoryManager">
+    <command-history-files>
+      <command-history-file filename="diyipingce-history" project-path="E:/myworkspace/Project-php/diyipingce" last-access-time="1644212779681" />
+      <command-history-file filename="PHP.Study-history" project-path="E:/myworkspace/MyStudy/PHP" last-access-time="1644231995342" />
+      <command-history-file filename="BasiceLibrary.PHP-history" project-path="E:/myworkspace/BasiceLibrary.PHP" last-access-time="1642210478445" />
+      <command-history-file filename="tp-history" project-path="E:/OpenSource/PHP/thinkPHP/tp" last-access-time="1642072865414" />
+    </command-history-files>
+  </component>
+</application>

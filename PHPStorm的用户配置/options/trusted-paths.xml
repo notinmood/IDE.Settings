@@ -1,0 +1,25 @@
+<application>
+  <component name="Trusted.Paths">
+    <option name="TRUSTED_PROJECT_PATHS">
+      <map>
+        <entry key="E:\OpenSource\PHP\thinkPHP\MyConsole" value="true" />
+        <entry key="E:\OpenSource\PHP\thinkPHP\tp" value="true" />
+        <entry key="E:\myworkspace\BasiceLibrary.PHP" value="true" />
+        <entry key="E:\myworkspace\MyConsole" value="true" />
+        <entry key="E:\myworkspace\MyStudy\PHP" value="true" />
+        <entry key="E:\myworkspace\Project-php\AnLian\Server\anlianproject" value="true" />
+        <entry key="E:\myworkspace\Project-php\FoxLove\Server" value="true" />
+        <entry key="E:\myworkspace\Project-php\diyipingce" value="true" />
+        <entry key="E:\myworkspace\Project-php\rainytop-web" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="Trusted.Paths.Settings">
+    <option name="TRUSTED_PATHS">
+      <list>
+        <option value="E:\myworkspace" />
+        <option value="E:\OpenSource\PHP\thinkPHP" />
+      </list>
+    </option>
+  </component>
+</application>

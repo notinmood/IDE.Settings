@@ -1,0 +1,2 @@
+commit-template-idea-plugin:skip_install
+GitCommitHelper:skip_install

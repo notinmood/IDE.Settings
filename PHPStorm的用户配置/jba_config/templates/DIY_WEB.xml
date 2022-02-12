@@ -1,0 +1,31 @@
+<templateSet group="DIY.WEB">
+  <template name="s" value="&lt;script type=&quot;text/javascript&quot;&gt;&#10;    $END$&#10;&lt;/script&gt;" description="&lt;script type=&quot;text/javascript&quot;&gt;&lt;/script&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="script" value="&lt;script type=&quot;text/javascript&quot;&gt;&#10;    $END$&#10;&lt;/script&gt;" description="&lt;script type=&quot;text/javascript&quot;&gt;&lt;/script&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="jr" value="jQuery(document).ready(function () {&#10;    $END$&#10;});" description="jQuery(document).ready(function () {     $END$ });" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="ECMAScript6" value="true" />
+      <option name="HTML" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="ss" value="&lt;script src=&quot;$END$&quot;&gt;&lt;/script&gt;" description="&lt;script src=&quot;$END$&quot;&gt;&lt;/script&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="rq" value="const $constName$ = require(&quot;$END$&quot;);" description="const $constName$ = require(&quot;$END$&quot;);" toReformat="false" toShortenFQNames="true">
+    <variable name="constName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

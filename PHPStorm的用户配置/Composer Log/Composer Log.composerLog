@@ -1,0 +1,34 @@
+  
+ update topthink/think-orm --no-progress --no-interaction --no-ansi
+ Loading composer repositories with package information
+ Updating dependencies
+ Lock file operations: 0 installs, 1 update, 0 removals
+   - Upgrading topthink/think-orm (v2.0.46 => v2.0.50)
+ Writing lock file
+ Installing dependencies from lock file (including require-dev)
+ Package operations: 0 installs, 1 update, 0 removals
+   - Syncing topthink/think-orm (v2.0.50) into cache
+ 
+ 
+   [RuntimeException]
+   Source directory E:\myworkspace\BasiceLibrary.PHP\vendor\topthink\think-orm has uncommitted changes.
+ 
+ 
+ update [--with WITH] [--prefer-source] [--prefer-dist] [--prefer-install PREFER-INSTALL] [--dry-run] [--dev] [--no-dev] [--lock] [--no-install] [--no-autoloader] [--no-scripts] [--no-suggest] [--no-progress] [-w|--with-dependencies] [-W|--with-all-dependencies] [-v|vv|vvv|--verbose] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--apcu-autoloader-prefix APCU-AUTOLOADER-PREFIX] [--ignore-platform-req IGNORE-PLATFORM-REQ] [--ignore-platform-reqs] [--prefer-stable] [--prefer-lowest] [-i|--interactive] [--root-reqs] [--] [<packages>]...
+ 
+ Failed to update packages for  ./composer.json.
+  
+ update phpunit/phpunit --no-progress --no-interaction --no-ansi
+ Loading composer repositories with package information
+ Updating dependencies
+ Lock file operations: 0 installs, 1 update, 0 removals
+   - Upgrading phpunit/phpunit (9.5.10 => 9.5.11)
+ Writing lock file
+ Installing dependencies from lock file (including require-dev)
+ Package operations: 0 installs, 1 update, 0 removals
+   - Downloading phpunit/phpunit (9.5.11)
+   - Upgrading phpunit/phpunit (9.5.10 => 9.5.11): Extracting archive
+ Generating autoload files
+ 30 packages you are using are looking for funding.
+ Use the `composer fund` command to find out more!
+ All packages for ./composer.json have been updated.

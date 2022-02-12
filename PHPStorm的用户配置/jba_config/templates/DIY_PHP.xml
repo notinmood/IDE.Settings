@@ -1,0 +1,239 @@
+<templateSet group="DIY.PHP">
+  <template name="f" value="public function $funcName$($param$){&#10;    $END$&#10;}" description="public function" toReformat="false" toShortenFQNames="true">
+    <variable name="funcName" expression="" defaultValue="&quot;getSome&quot;" alwaysStopAt="true" />
+    <variable name="param" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="funcs" value="public static function $funcName$($param$){&#10;    $END$&#10;}" description="public static function" toReformat="false" toShortenFQNames="true">
+    <variable name="funcName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="param" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="if" value="if($Condition$){&#10;    $END$&#10;}" description="if(){}" toReformat="false" toShortenFQNames="true">
+    <variable name="Condition" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ife" value="if($Condition$){&#10;    $END$&#10;}else{&#10;    &#10;}" description="if(){}else{}" toReformat="false" toShortenFQNames="true">
+    <variable name="Condition" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="." value="-&gt;" shortcut="SPACE" description="-&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="pe" value="PHP_EOL" description="PHP_EOL" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="rq" value="require &quot;$path$&quot;;" description="require &quot;$path$&quot;;" toReformat="false" toShortenFQNames="true">
+    <variable name="path" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="epe" value="echo PHP_EOL;" description="echo PHP_EOL;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="sf" value="public static function $funcName$($param$){&#10;    $END$&#10;}" description="public static function" toReformat="false" toShortenFQNames="true">
+    <variable name="funcName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="param" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="rt" value="return $END$;" description="return $END$;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="t" value="$this-&gt;" description="$this-&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="d" value="dump($END$);" description="dump();" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="v" value="$value" description="$value" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="r" value="$result" description="$result" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="k" value="$key" description="$key" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ins" value="private static $_instance = null;&#10;&#10;private function __construct()&#10;{&#10;    //do nothing;&#10;}&#10;&#10;public static function Instance()&#10;{&#10;    if (!self::$_instance) {&#10;        self::$_instance = new self();&#10;    }&#10;&#10;    return self::$_instance;&#10;}" description="创建对象单例" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="while" value="while ($END$) {&#10;}" description="while ($END$) { }" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="e2s" value="private $instance = null;&#10;&#10;public static function __callStatic($method, $params)&#10;{&#10;    if (is_null(self::$instance)) {&#10;        self::$instance = new self();&#10;        call_user_func_array([self::$instance, $method], $params);&#10;    }&#10;}" description="将实例方法自动转成静态方法" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="iff" value="if (!function_exists(&quot;$FuncName$&quot;)) {&#10;    function $FuncName$($Param$)&#10;    {&#10;        $END$&#10;    }&#10;}" description="if (!function_exists(&quot;$FuncName$&quot;)) {}" toReformat="false" toShortenFQNames="true">
+    <variable name="FuncName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="Param" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ae" value="self::assertEquals($expected$,$actual$);" description="self::assertEquals($expected,$actual);" toReformat="false" toShortenFQNames="true">
+    <variable name="expected" expression="" defaultValue="&quot;$expected&quot;" alwaysStopAt="true" />
+    <variable name="actual" expression="" defaultValue="&quot;$actual&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="a" value="$actual = " description="$actual =" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="e" value="$expected = " description="$expected =" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="n" value="$name" description="$name" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="m" value="$mate" description="$mate" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="vv" value="$value = " description="$value =" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="rr" value="$result = " description="$result =" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="mm" value="$mate = " description="$mate =" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="kk" value="$key = " description="$key =" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="i" value="if($Condition$){&#10;    $END$&#10;}" description="if(){}" toReformat="false" toShortenFQNames="true">
+    <variable name="Condition" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="nn" value="$name = " description="$name =" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="s" value="self::" description="self::" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="fa" value="false" description="false" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="tr" value="true" description="true" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="xxx" value="// +--------------------------------------------------------------------------&#10;// |::说明：| $description$&#10;// +--------------------------------------------------------------------------" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ECMAScript6" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="xxy" value="// |·······| $description$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ECMAScript6" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="td" value="//TODO:@xiedali $END$" shortcut="SPACE" description="//TODO:@xiedali $END$" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="xxd" value="// +--------------------------------------------------------------------------&#10;// |::TODO.| $description$&#10;// +--------------------------------------------------------------------------" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="description" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ECMAScript6" value="true" />
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="ni" value=" /** @noinspection all */" description="/** @noinspection all */" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="mmm" value="&quot;$key$&quot;:&quot;$value$&quot;," description="&quot;$key$&quot;:&quot;$value$&quot;," toReformat="false" toShortenFQNames="true">
+    <variable name="key" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="aa" value="$data[&quot;$key$&quot;] = &quot;$value$&quot;;" description="$data[&quot;$key$&quot;] = &quot;$value$&quot;;" toReformat="false" toShortenFQNames="true">
+    <variable name="key" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+  <template name="vvv" value="$data[&quot;$key$&quot;] = &quot;$value$&quot;;" description="$data[&quot;$key$&quot;] = &quot;$value$&quot;;" toReformat="false" toShortenFQNames="true">
+    <variable name="key" expression="" defaultValue="&quot;key&quot;" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="&quot;value&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="PHP" value="true" />
+    </context>
+  </template>
+</templateSet>

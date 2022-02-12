@@ -1,0 +1,10 @@
+<application>
+  <component name="FileTypeManager" version="18">
+    <extensionMap>
+      <mapping pattern="各数据源的命名规则" type="AUTO_DETECTED" />
+      <mapping ext="default" type="PLAIN_TEXT" />
+      <mapping ext="plantuml" type="PlantUML file" />
+      <removed_mapping ext="ignore" approved="true" type="IgnoreLang file" />
+    </extensionMap>
+  </component>
+</application>

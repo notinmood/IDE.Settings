@@ -1,0 +1,994 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="BasiceLibary.PHP" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="DatabaseView">
+    <expand>
+      <path>
+        <item name="Root Group" type="25e4ec8d:DvRootDsGroup" />
+        <item name="@localhost: DSN" type="27e358d6:DataSourceNode" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/utils/ArrayHelperTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="327" column="47" selection-start-line="327" selection-start-column="47" selection-end-line="327" selection-end-column="47" />
+              <folding>
+                <element signature="e#208#242#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/utils/Base64HelperTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/utils/ConfigHelperTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+              <folding>
+                <element signature="e#209#246#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name=".env file">
+      <summary usageCount="22" lastUsed="1644149108137" />
+    </fileType>
+    <fileType name="DIFF">
+      <summary usageCount="17" lastUsed="1644200268809" />
+    </fileType>
+    <fileType name="HTML">
+      <summary usageCount="1" lastUsed="1641988022080" />
+    </fileType>
+    <fileType name="Ini">
+      <summary usageCount="12" lastUsed="1642938861263" />
+    </fileType>
+    <fileType name="JSON">
+      <summary usageCount="27" lastUsed="1644154089804" />
+    </fileType>
+    <fileType name="JavaScript">
+      <summary usageCount="7" lastUsed="1643287533057" />
+    </fileType>
+    <fileType name="Markdown">
+      <summary usageCount="54" lastUsed="1644212756225" />
+    </fileType>
+    <fileType name="PHP">
+      <summary usageCount="1206" lastUsed="1644662210488" />
+    </fileType>
+    <fileType name="PLAIN_TEXT">
+      <summary usageCount="12" lastUsed="1644200386269" />
+    </fileType>
+    <fileType name="SQL">
+      <summary usageCount="6" lastUsed="1644149074993" />
+    </fileType>
+    <fileType name="UML">
+      <summary usageCount="1" lastUsed="1640919389714" />
+    </fileType>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CONVERTER</find>
+      <find>ARRAYS</find>
+      <find>ObjectTypes::ARRAY</find>
+      <find>where</find>
+      <find>testSelect</find>
+      <find>config</find>
+      <find>Long</find>
+      <find>$__configContentArray</find>
+      <find>explode</find>
+      <find>explode(</find>
+      <find>[0]</find>
+      <find>Friendly</find>
+      <find>PHP</find>
+      <find>@mail   :</find>
+      <find>@emailto:</find>
+      <find>Config</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>testWhere</replace>
+      <replace>@mail   :</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\myworkspace\BasiceLibary.PHP\Utils\Data</dir>
+      <dir>E:\myworkspace\BasiceLibrary.PHP\Utils</dir>
+      <dir>E:\myworkspace\BasiceLibrary.PHP\Utils\Data</dir>
+      <dir>E:\myworkspace\BasiceLibrary.PHP\Utils\Environment</dir>
+      <dir>E:\myworkspace\BasiceLibrary.PHP\test\utils</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Utils/Data/StringHelper.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/ObjectHelper.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/RandHelper.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/ReflectionHelper.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/VerifyHelper.php" />
+      <option value="$PROJECT_DIR$/Biz/Stock/StockHelper.php" />
+      <option value="$PROJECT_DIR$/Biz/Stock/StockMate.php" />
+      <option value="$PROJECT_DIR$/Biz/Stock/StockDataSource/StockDataSourceDemo.php" />
+      <option value="$PROJECT_DIR$/Utils/DataModel/ModelMate.php" />
+      <option value="$PROJECT_DIR$/Utils/Config/ConfigClient.php" />
+      <option value="$PROJECT_DIR$/README.md" />
+      <option value="$PROJECT_DIR$/Common/functions.php" />
+      <option value="$PROJECT_DIR$/test/utils/EmptyTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/EnvHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/MathHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/database/DatabaseHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/database/MateContainerTest.php" />
+      <option value="$PROJECT_DIR$/test/database/ModelDDLTest.php" />
+      <option value="$PROJECT_DIR$/test/database/ModelMateTest.php" />
+      <option value="$PROJECT_DIR$/test/database/DatabaseUnitTestTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/GuidHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/InstanceContainerTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/HtmlHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/NullObjectTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/StockMateTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/StockHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/PathHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/FileHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/NumberHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/ReflectionHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/StockDataSourceSinaTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/WebHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/ChineseHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/DateHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/VerifyHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/ResultObjectTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/ObjectHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/ConfigMateTest.php" />
+      <option value="$PROJECT_DIR$/Utils/Config/ConfigMate.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/ArrayHelper.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/CodeHelper.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/HtmlHelper.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/ObjectTypes.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/ThinkHelper.php" />
+      <option value="$PROJECT_DIR$/Utils/Data/Timer.php" />
+      <option value="$PROJECT_DIR$/test/utils/StringHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/ThreadHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/LinkedListTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/ArrayHelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/Base64HelperTest.php" />
+      <option value="$PROJECT_DIR$/test/utils/ConfigHelperTest.php" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="DataConstruct" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="DataModel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="DataValue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Environment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Finance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="IO" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="IO" type="462c0819:PsiDirectoryNode" />
+              <item name="Drawing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="IO" type="462c0819:PsiDirectoryNode" />
+              <item name="File" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="IO" type="462c0819:PsiDirectoryNode" />
+              <item name="File" type="462c0819:PsiDirectoryNode" />
+              <item name="FileUtilDriver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Office" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Pattern" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Syntax" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BasiceLibrary.PHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BasiceLibrary.PHP" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
+              <item name="Web" type="462c0819:PsiDirectoryNode" />
+              <item name="Widget" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="本地" currentWorkingDirectory="E:\myworkspace\BasiceLibrary.PHP\" commandHistoryFileName="BasiceLibrary.PHP-history" />
+    </option>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ConfigMateTest_testArrayGet_(1) - 2022.02.12 at 11h 15m 12s.xml">
+      <configuration name="ConfigMateTest.testArrayGet (1)" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="utils - 2022.02.12 at 11h 15m 18s.xml">
+      <configuration name="utils" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ResultObjectTest - 2022.02.12 at 11h 17m 33s.xml">
+      <configuration name="ResultObjectTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ObjectHelperTest - 2022.02.12 at 11h 18m 31s.xml">
+      <configuration name="ObjectHelperTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ObjectHelperTest - 2022.02.12 at 11h 18m 40s.xml">
+      <configuration name="ObjectHelperTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ConfigMateTest_testIniGet - 2022.02.12 at 11h 37m 10s.xml">
+      <configuration name="ConfigMateTest.testIniGet" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ConfigMateTest - 2022.02.12 at 11h 37m 45s.xml">
+      <configuration name="ConfigMateTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ConfigMateTest - 2022.02.12 at 11h 40m 03s.xml">
+      <configuration name="ConfigMateTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="ConfigMateTest - 2022.02.12 at 11h 40m 47s.xml">
+      <configuration name="ConfigMateTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="StringHelperTest - 2022.02.12 at 17h 40m 16s.xml">
+      <configuration name="StringHelperTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="389075000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17666423" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.21689832" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" weight="0.27322605" />
+      <window_info id="Pull Requests" order="4" weight="0.3302853" />
+      <window_info id="Bookmarks" order="5" side_tool="true" />
+      <window_info id="Run" order="6" weight="0.26883686" />
+      <window_info anchor="bottom" id="Version Control" order="0" weight="0.6423611" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.3298611" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3298611" />
+      <window_info anchor="bottom" id="Problems View" order="3" visible="true" weight="0.19375" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.28958333" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="5" />
+      <window_info anchor="bottom" id="Eval Reset" order="6" visible="true" weight="0.33125" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
+      <window_info anchor="bottom" id="重复项" order="8" weight="0.3298611" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="10" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.3298611" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.3298611" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Flow" order="14" />
+      <window_info anchor="bottom" id="TypeScript" order="15" />
+      <window_info anchor="bottom" id="Services" order="16" show_stripe_button="false" />
+      <window_info anchor="right" id="Api Debugger" order="0" />
+      <window_info anchor="right" id="Database" order="1" weight="0.3302853" />
+      <window_info anchor="right" id="documentation.v2" order="2" side_tool="true" />
+      <window_info anchor="right" id="PlantUML" order="3" weight="0.3302853" />
+      <window_info anchor="right" id="String Manipulation" order="4" weight="0.3302853" />
+      <window_info anchor="right" id="Hierarchy" order="5" weight="0.3302853" />
+    </layout>
+    <recentWindows>
+      <value>Problems View</value>
+      <value>Project</value>
+      <value>Commit</value>
+      <value>Run</value>
+      <value>Find</value>
+      <value>重复项</value>
+      <value>Database</value>
+      <value>Debug</value>
+      <value>Terminal</value>
+      <value>Version Control</value>
+      <value>TODO</value>
+      <value>Hierarchy</value>
+      <value>String Manipulation</value>
+      <value>Pull Requests</value>
+      <value>Structure</value>
+      <value>PlantUML</value>
+      <value>Event Log</value>
+      <value>Eval Reset</value>
+    </recentWindows>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" />
+  <component name="WindowStateProjectService">
+    <state x="260" y="15" key="#CLI_解释器" timestamp="1644135213798">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="260" y="15" key="#CLI_解释器/0.0.1366.720@0.0.1366.720" timestamp="1644135213798" />
+    <state x="247" y="181" key="#SQL_方言" timestamp="1644147612866">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="247" y="181" key="#SQL_方言/0.0.1366.720@0.0.1366.720" timestamp="1644147612866" />
+    <state x="322" y="202" key="#SQL_解析范围" timestamp="1644147731689">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="322" y="202" key="#SQL_解析范围/0.0.1366.720@0.0.1366.720" timestamp="1644147731689" />
+    <state x="548" y="200" width="620" height="234" key="#com.intellij.codeInsight.template.impl.EditVariableDialog" timestamp="1644490691375">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="548" y="200" width="620" height="234" key="#com.intellij.codeInsight.template.impl.EditVariableDialog/0.0.1366.720@0.0.1366.720" timestamp="1644490691375" />
+    <state x="275" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1644148291736">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="275" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.720@0.0.1366.720" timestamp="1644148291736" />
+    <state x="38" y="59" width="1182" height="536" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1638536138189">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="38" y="59" width="1182" height="536" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1366.720@0.0.1366.720" timestamp="1638536138189" />
+    <state x="423" y="136" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1641337154783">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="423" y="136" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.720@0.0.1366.720" timestamp="1641337154783" />
+    <state x="444" y="194" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1644663359220">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="444" y="194" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1366.720@0.0.1366.720" timestamp="1644663359220" />
+    <state x="483" y="40" key="#com.intellij.ide.util.MemberChooser" timestamp="1642214992373">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="483" y="40" key="#com.intellij.ide.util.MemberChooser/0.0.1366.720@0.0.1366.720" timestamp="1642214992373" />
+    <state x="275" y="56" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1644540933457">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="275" y="56" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.720@0.0.1366.720" timestamp="1644540933457" />
+    <state x="309" y="51" width="600" height="592" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1644210968472">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="309" y="51" width="600" height="592" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.720@0.0.1366.720" timestamp="1644210968472" />
+    <state x="383" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1642938316047">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="383" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1642938316047" />
+    <state x="383" y="87" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1641263539873">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="383" y="87" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1366.720@0.0.1366.720" timestamp="1641263539873" />
+    <state x="383" y="30" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1638524522295">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="383" y="30" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1366.720@0.0.1366.720" timestamp="1638524522295" />
+    <state x="516" y="230" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1" timestamp="1640437237662">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="516" y="230" key="#com.jetbrains.php.refactoring.move.PhpMoveClassDialog#1/0.0.1366.720@0.0.1366.720" timestamp="1640437237662" />
+    <state x="438" y="61" key="#xdebugger.evaluate" timestamp="1641281562059">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="438" y="61" key="#xdebugger.evaluate/0.0.1366.720@0.0.1366.720" timestamp="1641281562059" />
+    <state x="309" y="0" key="#检查" timestamp="1644658184060">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="309" y="0" key="#检查/0.0.1366.720@0.0.1366.720" timestamp="1644658184060" />
+    <state x="263" y="15" key="#测试框架" timestamp="1641173266756">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="263" y="15" key="#测试框架/0.0.1366.720@0.0.1366.720" timestamp="1641173266756" />
+    <state width="323" height="235" key="DebuggerActiveHint" timestamp="1642029036203">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="323" height="235" key="DebuggerActiveHint/0.0.1366.720@0.0.1366.720" timestamp="1642029036203" />
+    <state x="463" y="115" key="FileChooserDialogImpl" timestamp="1644663342384">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="463" y="115" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1644663342384" />
+    <state width="258" height="196" key="Git.Branch.Popup" timestamp="1644101659861">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="258" height="196" key="Git.Branch.Popup/0.0.1366.720@0.0.1366.720" timestamp="1644101659861" />
+    <state width="366" height="426" key="GridCell.Tab.0.bottom" timestamp="1644663628936">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="366" height="426" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1644663628936" />
+    <state width="366" height="426" key="GridCell.Tab.0.center" timestamp="1644663628936">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="366" height="426" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1644663628936" />
+    <state width="366" height="426" key="GridCell.Tab.0.left" timestamp="1644663628936">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="366" height="426" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1644663628936" />
+    <state width="366" height="426" key="GridCell.Tab.0.right" timestamp="1644663628936">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="366" height="426" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1644663628936" />
+    <state width="1321" height="180" key="GridCell.Tab.1.bottom" timestamp="1644125919132">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="180" key="GridCell.Tab.1.bottom/0.0.1366.720@0.0.1366.720" timestamp="1644125919132" />
+    <state width="1321" height="180" key="GridCell.Tab.1.center" timestamp="1644125919131">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="180" key="GridCell.Tab.1.center/0.0.1366.720@0.0.1366.720" timestamp="1644125919131" />
+    <state width="1321" height="180" key="GridCell.Tab.1.left" timestamp="1644125919131">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="180" key="GridCell.Tab.1.left/0.0.1366.720@0.0.1366.720" timestamp="1644125919131" />
+    <state width="1321" height="180" key="GridCell.Tab.1.right" timestamp="1644125919132">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="180" key="GridCell.Tab.1.right/0.0.1366.720@0.0.1366.720" timestamp="1644125919132" />
+    <state x="396" y="79" key="NewPhpClassDialog" timestamp="1642029507700">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="396" y="79" key="NewPhpClassDialog/0.0.1366.720@0.0.1366.720" timestamp="1642029507700" />
+    <state x="523" y="282" key="NewPhpFileDialog" timestamp="1643288315642">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="523" y="282" key="NewPhpFileDialog/0.0.1366.720@0.0.1366.720" timestamp="1643288315642" />
+    <state x="491" y="61" key="RollbackChangesDialog" timestamp="1644149288178">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="491" y="61" key="RollbackChangesDialog/0.0.1366.720@0.0.1366.720" timestamp="1644149288178" />
+    <state x="189" y="0" key="SettingsEditor" timestamp="1644663228674">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="189" y="0" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1644663228674" />
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2" timestamp="1644659023995">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="275" y="93" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1644659023995" />
+    <state x="348" y="80" width="814" height="558" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1644487288779">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="348" y="80" width="814" height="558" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1366.720@0.0.1366.720" timestamp="1644487288779" />
+    <state x="92" y="92" width="1182" height="536" key="dock-window-1" timestamp="1640927888249">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="92" y="92" width="1182" height="536" key="dock-window-1/0.0.1366.720@0.0.1366.720" timestamp="1640927888249" />
+    <state x="92" y="92" width="1182" height="536" key="dock-window-2" timestamp="1640927888251">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="92" y="92" width="1182" height="536" key="dock-window-2/0.0.1366.720@0.0.1366.720" timestamp="1640927888251" />
+    <state x="92" y="92" width="1182" height="536" key="dock-window-3" timestamp="1640927888252">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="92" y="92" width="1182" height="536" key="dock-window-3/0.0.1366.720@0.0.1366.720" timestamp="1640927888252" />
+    <state x="216" y="-2" width="1032" height="717" key="find.popup" timestamp="1644633893086">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="216" y="-2" width="1032" height="717" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1644633893086" />
+    <state x="501" y="200" key="git4idea.ui.GitTagDialog" timestamp="1644101620568">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="501" y="200" key="git4idea.ui.GitTagDialog/0.0.1366.720@0.0.1366.720" timestamp="1644101620568" />
+    <state x="339" y="160" key="run.anything.popup" timestamp="1642239864712">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1642239864712" />
+    <state x="346" y="34" width="672" height="685" key="search.everywhere.popup" timestamp="1641984222433">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="346" y="34" width="672" height="685" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1641984222433" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>self::$loadedArray</expression-string>
+        <language-id>PHP</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test/utils/ObjectHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="116" column="16" selection-start-line="116" selection-start-column="16" selection-end-line="116" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/DateHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#176#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/EmptyTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="10" selection-start-line="10" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#170#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/EnvHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/GuidHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#208#241#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Config/ConfigClient.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/ConfigMateTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Config/ConfigMate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="117" column="54" lean-forward="true" selection-start-line="117" selection-start-column="54" selection-end-line="117" selection-end-column="54" />
+          <folding>
+            <element signature="e#206#240#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Config/ConfigParser.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Config/ConfigParserArray.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Config/ConfigParserIni.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Config/ConfigParserJson.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Config/dotEnvHelper.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/Base64Helper.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/ArrayHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="53" column="27" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/BoolHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="32" column="27" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/ByteHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/CalculateMate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-959">
+          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/tokenizer/tokenizer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/CodeHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/ColorHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-598">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/DBSetHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1096" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/EncodingHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-498">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/HtmlHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/JsonHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="29" column="27" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/MathHelper.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/MorseHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="83" column="19" selection-start-line="83" selection-start-column="19" selection-end-line="83" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/NumberHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-628" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/ObjectHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="322" column="27" selection-start-line="322" selection-start-column="27" selection-end-line="322" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/ObjectTypes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/RandHelper.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/RegexHelper.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/ReflectionHelper.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/ThinkHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/XmlHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/StockMateTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#37#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/StockHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#37#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/PathHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/NumberHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/HtmlHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#208#241#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/IO/FileHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="82" column="27" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/FileHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="25" column="36" lean-forward="true" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/LinkedListTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="e#207#249#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/ThreadHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="38" column="44" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/StringHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="104" column="35" lean-forward="true" selection-start-line="104" selection-start-column="35" selection-end-line="104" selection-end-column="35" />
+          <folding>
+            <element signature="e#6#177#0#PHP" expanded="true" />
+            <element signature="e#209#244#0#PHP" expanded="true" />
+            <element signature="e#324#1518#0#PHP" />
+            <element signature="e#1524#2222#0#PHP" />
+            <element signature="e#2228#2543#0#PHP" />
+            <element signature="e#2549#2871#0#PHP" />
+            <element signature="e#3136#3375#0#PHP" />
+            <element signature="e#3381#3595#0#PHP" />
+            <element signature="e#3601#3814#0#PHP" />
+            <element signature="e#3820#4411#0#PHP" />
+            <element signature="e#4417#4634#0#PHP" />
+            <element signature="e#4640#4857#0#PHP" />
+            <element signature="e#4863#5625#0#PHP" />
+            <element signature="e#5631#6612#0#PHP" />
+            <element signature="e#6618#6814#0#PHP" />
+            <element signature="e#6820#7254#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/StringHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="41" lean-forward="true" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/Data/Timer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="56" column="27" lean-forward="true" selection-start-line="56" selection-start-column="27" selection-end-line="56" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/ArrayHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="327" column="47" selection-start-line="327" selection-start-column="47" selection-end-line="327" selection-end-column="47" />
+          <folding>
+            <element signature="e#208#242#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/Base64HelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="42" column="47" lean-forward="true" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/ChineseHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/utils/ConfigHelperTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="77" column="25" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="25" />
+          <folding>
+            <element signature="e#209#246#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,36 @@
+<application>
+  <component name="com.intellij.ide.ui.customization.CustomActionsSchema">
+    <group value="Forward" is_action="true" action_type="-1" position="6">
+      <path value="root" />
+      <path value="主工具栏" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <group value="Back" is_action="true" action_type="-1" position="5">
+      <path value="root" />
+      <path value="主工具栏" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <group value="$Undo" is_action="true" action_type="1" position="7">
+      <path value="root" />
+      <path value="主工具栏" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <group value="$Redo" is_action="true" action_type="1" position="8">
+      <path value="root" />
+      <path value="主工具栏" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <group value="Back" is_action="true" action_type="1" position="11">
+      <path value="root" />
+      <path value="主工具栏" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <group value="Forward" is_action="true" action_type="1" position="12">
+      <path value="root" />
+      <path value="主工具栏" />
+      <option name="myInitialPosition" value="-1" />
+    </group>
+    <action id="ReformatCode" icon="D:/tools/develope/pycharm/图标/format.png" />
+    <action id="OptimizeImports" icon="D:/tools/develope/pycharm/图标/clear.png" />
+  </component>
+</application>

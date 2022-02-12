@@ -1,0 +1,17 @@
+com.intellij.zh
+PlantUML integration
+commit-message-helper-idea-plugin
+GitCommitHelper
+commit-template-idea-plugin
+zielu.gittoolbox
+de.espend.idea.php.annotation
+de.espend.idea.php.toolbox
+fr.adrienbrault.idea.symfony2plugin
+mobi.hsz.idea.gitignore
+ru.adelf.idea.dotenv
+com.github.timo_reymann.composer_dump_autoload_phpstorm_plugin
+com.kite.intellij
+AceJump
+com.github.turansky.yfiles
+String Manipulation
+com.intellij.ideolog

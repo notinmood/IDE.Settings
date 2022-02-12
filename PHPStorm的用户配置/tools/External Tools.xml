@@ -1,0 +1,9 @@
+<toolSet name="External Tools">
+  <tool name="PHP中文" description="PHP手册" showInMainMenu="false" showInEditor="false" showInProject="false" showInSearchPopup="false" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" />
+      <option name="PARAMETERS" value="-a http://php.net/manual/zh/function.$SelectedText$.php" />
+      <option name="WORKING_DIRECTORY" value="C:/Program Files (x86)/Microsoft/Edge/Application/" />
+    </exec>
+  </tool>
+</toolSet>

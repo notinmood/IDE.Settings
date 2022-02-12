@@ -1,0 +1,57 @@
+<application>
+  <component name="DimensionService">
+    <location key="find.popup.0.0.1366.768" x="216" y="-2" />
+    <location key="XPathView.InputDialog.DIMENSION_SERVICE_KEY.SIMPLE.0.0.1366.768" x="497" y="216" />
+    <size key="GridCell.Tab.0.left.0.0.1366.768" width="366" height="426" />
+    <size key="GridCell.Tab.0.center.0.0.1366.768" width="366" height="426" />
+    <size key="GridCell.Tab.0.right.0.0.1366.768" width="366" height="426" />
+    <size key="GridCell.Tab.0.bottom.0.0.1366.768" width="366" height="426" />
+    <size key="find.popup.0.0.1366.768" width="1032" height="717" />
+    <size key="GridCell.Tab.1.left.0.0.1366.768" width="1321" height="180" />
+    <size key="GridCell.Tab.1.center.0.0.1366.768" width="1321" height="180" />
+    <size key="GridCell.Tab.1.right.0.0.1366.768" width="1321" height="180" />
+    <size key="GridCell.Tab.1.bottom.0.0.1366.768" width="1321" height="180" />
+    <size key="XPathView.InputDialog.DIMENSION_SERVICE_KEY.SIMPLE.0.0.1366.768" width="371" height="288" />
+    <size key="GridCell.Tab.2.left.0.0.1366.768" width="1321" height="174" />
+    <size key="GridCell.Tab.2.center.0.0.1366.768" width="1321" height="174" />
+    <size key="GridCell.Tab.2.right.0.0.1366.768" width="1321" height="174" />
+    <size key="GridCell.Tab.2.bottom.0.0.1366.768" width="1321" height="174" />
+  </component>
+  <component name="WindowManager">
+    <frame x="-8" y="-8" width="1382" height="736" extendedState="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+    </layout>
+  </component>
+  <component name="WindowStateApplicationService">
+    <state x="48" y="101" key="FileChooserDialogImpl" timestamp="1639305373014">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="48" y="101" key="FileChooserDialogImpl/0.0.1366.720" timestamp="1639305373014" />
+    <state x="948" y="501" width="300" height="195" key="ProcessPopupWindow" timestamp="1644659016432">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="948" y="501" width="300" height="195" key="ProcessPopupWindow/0.0.1366.720" timestamp="1644659016432" />
+    <state width="478" height="171" key="ShowUsagesActions.dimensionServiceKey" timestamp="1644658684148">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="478" height="171" key="ShowUsagesActions.dimensionServiceKey/0.0.1366.720" timestamp="1644658684148" />
+    <state width="300" height="298" key="Vcs.CompareWithSelectedRevision.Popup" timestamp="1642238339960">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="300" height="298" key="Vcs.CompareWithSelectedRevision.Popup/0.0.1366.720" timestamp="1642238339960" />
+    <state x="683" y="340" width="800" height="600" key="WELCOME_SCREEN" timestamp="1643709091394">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="683" y="340" width="800" height="600" key="WELCOME_SCREEN/0.0.1366.720" timestamp="1643709091394" />
+    <state width="300" height="484" key="manage.recent.projects.popup" timestamp="1641979545598">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="300" height="484" key="manage.recent.projects.popup/0.0.1366.720" timestamp="1641979545598" />
+  </component>
+</application>

@@ -1,0 +1,274 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="diyipingce" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/EnvTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="429" selection-start-line="429" selection-end-line="429" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Config/dotEnvHelper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Config/ConfigHelper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="JSON">
+      <summary usageCount="2" lastUsed="1641363704052" />
+    </fileType>
+    <fileType name="Markdown">
+      <summary usageCount="1" lastUsed="1641363147076" />
+    </fileType>
+    <fileType name="PHP">
+      <summary usageCount="5" lastUsed="1641364322702" />
+    </fileType>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/README.md" />
+      <option value="$PROJECT_DIR$/composer.json" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="diyipingce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diyipingce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="diyipingce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diyipingce" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="本地" currentWorkingDirectory="E:\myworkspace\Project-php\diyipingce\" commandHistoryFileName="diyipingce-history1" />
+    </option>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="EnvTest - 2022.01.05 at 14h 26m 05s.xml">
+      <configuration name="EnvTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest - 2022.01.05 at 14h 31m 17s.xml">
+      <configuration name="EnvTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest - 2022.01.05 at 14h 31m 35s.xml">
+      <configuration name="EnvTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1272000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24981713" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Bookmarks" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" />
+      <window_info id="Pull Requests" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4409722" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40069443" />
+      <window_info anchor="bottom" id="TODO" order="3" />
+      <window_info anchor="bottom" id="Problems View" order="3" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="File Transfer" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.3298611" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TypeScript" order="5" />
+      <window_info anchor="bottom" id="Flow" order="5" />
+      <window_info anchor="bottom" id="Services" order="5" />
+      <window_info anchor="right" id="PlantUML" order="4" />
+      <window_info anchor="right" id="String Manipulation" order="4" />
+      <window_info anchor="right" id="Api Debugger" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="right" id="documentation.v2" order="5" side_tool="true" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+      <value>Debug</value>
+      <value>Run</value>
+      <value>Terminal</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="494" y="207" key="#Composer" timestamp="1641363329727">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="494" y="207" key="#Composer/0.0.1366.720@0.0.1366.720" timestamp="1641363329727" />
+    <state x="462" y="115" key="FileChooserDialogImpl" timestamp="1641363912039">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="462" y="115" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1641363912039" />
+    <state width="1321" height="260" key="GridCell.Tab.0.bottom" timestamp="1641364447445">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="260" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1641364447445" />
+    <state width="1321" height="260" key="GridCell.Tab.0.center" timestamp="1641364447445">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="260" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1641364447445" />
+    <state width="1321" height="260" key="GridCell.Tab.0.left" timestamp="1641364447429">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="260" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1641364447429" />
+    <state width="1321" height="260" key="GridCell.Tab.0.right" timestamp="1641364447445">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="260" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1641364447445" />
+    <state width="1321" height="260" key="GridCell.Tab.1.bottom" timestamp="1641364447445">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="260" key="GridCell.Tab.1.bottom/0.0.1366.720@0.0.1366.720" timestamp="1641364447445" />
+    <state width="1321" height="260" key="GridCell.Tab.1.center" timestamp="1641364447445">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="260" key="GridCell.Tab.1.center/0.0.1366.720@0.0.1366.720" timestamp="1641364447445" />
+    <state width="1321" height="260" key="GridCell.Tab.1.left" timestamp="1641364447445">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="260" key="GridCell.Tab.1.left/0.0.1366.720@0.0.1366.720" timestamp="1641364447445" />
+    <state width="1321" height="260" key="GridCell.Tab.1.right" timestamp="1641364447445">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="260" key="GridCell.Tab.1.right/0.0.1366.720@0.0.1366.720" timestamp="1641364447445" />
+    <state x="191" y="0" key="SettingsEditor" timestamp="1641364270545">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="191" y="0" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1641364270545" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-captcha/src/helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/EnvTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Config/ConfigHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/ClassLoader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="429" selection-start-line="429" selection-end-line="429" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Config/dotEnvHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

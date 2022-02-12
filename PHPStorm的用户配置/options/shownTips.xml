@@ -1,0 +1,70 @@
+<application>
+  <component name="ShownTips">
+    <option name="shownTips">
+      <map>
+        <entry key="AnnotationsAndDiffs.html" value="1635301085730" />
+        <entry key="ClipboardStack.html" value="1635407352437" />
+        <entry key="CodeCompletion.html" value="1642726803767" />
+        <entry key="CodeCompletionInSearch.html" value="1642164314836" />
+        <entry key="CodeCompletionNoShift.html" value="1643842510213" />
+        <entry key="ColumnSelection.html" value="1636160712477" />
+        <entry key="Compare.html" value="1635145926024" />
+        <entry key="CompareDataSources.html" value="1637162413856" />
+        <entry key="CompareEditorWithClipboard.html" value="1639273417095" />
+        <entry key="CompleteStatement.html" value="1638449802763" />
+        <entry key="CtrlDotInLookups.html" value="1636596119452" />
+        <entry key="CtrlShiftIForLookup.html" value="1644317202893" />
+        <entry key="DBRunQueryIntention.html" value="1639532580971" />
+        <entry key="DDDisable.html" value="1643183115682" />
+        <entry key="DiagramShowDiff.html" value="1635659934339" />
+        <entry key="DiagramShowPopup.html" value="1638928594916" />
+        <entry key="DragToOpen.html" value="1635906394488" />
+        <entry key="EvaluateExpression.html" value="1637976965626" />
+        <entry key="FileWatchersInspection.html" value="1641292619850" />
+        <entry key="FindInPath.html" value="1642387592545" />
+        <entry key="FixDocComment.html" value="1634313341652" />
+        <entry key="GoToAction.html" value="1636248110411" />
+        <entry key="GoToDeclaration.html" value="1634797148982" />
+        <entry key="GoToFile.html" value="1634696251499" />
+        <entry key="GotoLineInFile.html" value="1641618508384" />
+        <entry key="HighlightThrows.html" value="1635555697303" />
+        <entry key="HippieCompletion.html" value="1639140996007" />
+        <entry key="InsertLiveTemplate.html" value="1640843644431" />
+        <entry key="JoinLines.html" value="1640938447735" />
+        <entry key="JumpToLastEdit.html" value="1642934602060" />
+        <entry key="LensMode.html" value="1641383392546" />
+        <entry key="LiveTemplates.html" value="1642048361511" />
+        <entry key="MenuItemsDescriptions.html" value="1635407342673" />
+        <entry key="MethodSeparators.html" value="1642821118847" />
+        <entry key="MoveUpDown.html" value="1641187888679" />
+        <entry key="Multicursor1.html" value="1641959645929" />
+        <entry key="MultiselectionInSearch.html" value="1642726812926" />
+        <entry key="MultiselectionWords.html" value="1634313338860" />
+        <entry key="NamedBreakpoints.html" value="1637836948444" />
+        <entry key="NextPrevError.html" value="1643432632086" />
+        <entry key="PrintKeywords.html" value="1643709143781" />
+        <entry key="QuickDocOnMouseMove.html" value="1639141006194" />
+        <entry key="QuickFixRightArrow.html" value="1639047415130" />
+        <entry key="QuickJavaDoc.html" value="1638066387542" />
+        <entry key="RemoveBreakpoint.html" value="1643978234897" />
+        <entry key="RenameCssSelector.html" value="1635059399038" />
+        <entry key="ScopesInTODO.html" value="1643287517927" />
+        <entry key="SearchEverywhere.html" value="1639140945249" />
+        <entry key="SearchEverywhereSettings.html" value="1638603677134" />
+        <entry key="SearchInSettings.html" value="1642726752746" />
+        <entry key="SurroundWith.html" value="1644095740617" />
+        <entry key="Switcher.html" value="1643089466981" />
+        <entry key="TabInEditorClose.html" value="1634965106445" />
+        <entry key="TabInLookups.html" value="1644200107511" />
+        <entry key="TagNameCompletion.html" value="1643582482505" />
+        <entry key="ViewInBrowser.html" value="1644627003147" />
+        <entry key="YouTrack_integration.html" value="1639619641158" />
+        <entry key="db_tip_forget_cached_schemas.html" value="1640436990462" />
+        <entry key="intention_action_replace_with_between_expression.html" value="1636444810706" />
+        <entry key="local_history.html" value="1634313344933" />
+        <entry key="partial_git_commit.html" value="1638178154252" />
+        <entry key="recent-locations.html" value="1644481902761" />
+      </map>
+    </option>
+  </component>
+</application>

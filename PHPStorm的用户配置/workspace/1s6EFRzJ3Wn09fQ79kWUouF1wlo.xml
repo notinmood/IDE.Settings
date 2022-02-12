@@ -1,0 +1,947 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="diyipingce" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DatabaseView">
+    <expand>
+      <path>
+        <item name="Root Group" type="25e4ec8d:DvRootDsGroup" />
+        <item name="@localhost: DSN" type="27e358d6:DataSourceNode" />
+      </path>
+      <path>
+        <item name="Root Group" type="25e4ec8d:DvRootDsGroup" />
+        <item name="@localhost: DSN" type="27e358d6:DataSourceNode" />
+        <item name="diyipingce: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Root Group" type="25e4ec8d:DvRootDsGroup" />
+        <item name="@localhost: DSN" type="27e358d6:DataSourceNode" />
+        <item name="diyipingce: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="Family of 29 表 (host: 架构 diyipingce)" type="5ae9e67d:BaseModel$BaseNamingFamily" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1" />
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name=".env file">
+      <summary usageCount="13" lastUsed="1642165413670" />
+    </fileType>
+    <fileType name="CSS">
+      <summary usageCount="2" lastUsed="1641437076451" />
+    </fileType>
+    <fileType name="DIFF">
+      <summary usageCount="2" lastUsed="1642238415605" />
+    </fileType>
+    <fileType name="Database Element">
+      <summary usageCount="3" lastUsed="1643709129282" />
+    </fileType>
+    <fileType name="GitIgnore file">
+      <summary usageCount="6" lastUsed="1643632723254" />
+    </fileType>
+    <fileType name="HTML">
+      <summary usageCount="46" lastUsed="1644200116331" />
+    </fileType>
+    <fileType name="HTTP Request">
+      <summary usageCount="1" lastUsed="1643096609406" />
+    </fileType>
+    <fileType name="Ini">
+      <summary usageCount="4" lastUsed="1641436339424" />
+    </fileType>
+    <fileType name="JSON">
+      <summary usageCount="17" lastUsed="1643709117622" />
+    </fileType>
+    <fileType name="JavaScript">
+      <summary usageCount="37" lastUsed="1644201380266" />
+    </fileType>
+    <fileType name="Markdown">
+      <summary usageCount="17" lastUsed="1644212936980" />
+    </fileType>
+    <fileType name="PHP">
+      <summary usageCount="307" lastUsed="1644018257814" />
+    </fileType>
+    <fileType name="PLAIN_TEXT">
+      <summary usageCount="1" lastUsed="1642772523600" />
+    </fileType>
+    <fileType name="SQL">
+      <summary usageCount="2" lastUsed="1643090793765" />
+    </fileType>
+    <fileType name="TypeScript">
+      <summary usageCount="3" lastUsed="1643096833460" />
+    </fileType>
+    <fileType name="UML">
+      <summary usageCount="3" lastUsed="1643269119921" />
+    </fileType>
+    <fileType name="YAML">
+      <summary usageCount="3" lastUsed="1643096822740" />
+    </fileType>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>zend_extension</find>
+      <find>explode</find>
+      <find>xdebug</find>
+      <find>emotionTopic</find>
+      <find>baseFile</find>
+      <find>instances</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>itemInstances</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\myworkspace\Project-php\diyipingce\vendor\hiland\basiclibrary.php\Utils\Config</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/application/function.php" />
+      <option value="$PROJECT_DIR$/config/database_local.php" />
+      <option value="$PROJECT_DIR$/vendor/hiland/basiclibrary.php/test/ResultObjectTest.php" />
+      <option value="$PROJECT_DIR$/public/LICENSE.txt" />
+      <option value="$PROJECT_DIR$/test/Test.php" />
+      <option value="$PROJECT_DIR$/composer.json" />
+      <option value="$PROJECT_DIR$/application/index/controller/My.php" />
+      <option value="D:/php-8.0.11/php.ini" />
+      <option value="$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Config/ConfigParserIni.php" />
+      <option value="$PROJECT_DIR$/config/database.php" />
+      <option value="$PROJECT_DIR$/test/EnvTest.php" />
+      <option value="$PROJECT_DIR$/public/static/4412/css/responsive.css" />
+      <option value="$PROJECT_DIR$/application/index/controller/Home.php" />
+      <option value="$PROJECT_DIR$/application/index/view/layout.html" />
+      <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
+      <option value="$PROJECT_DIR$/application/index/controller/Index.php" />
+      <option value="$PROJECT_DIR$/application/index/controller/Exam.php" />
+      <option value="$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/DataModel/MateContainer.php" />
+      <option value="$PROJECT_DIR$/app/view/exam/getEmotions.html" />
+      <option value="$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Config/ConfigHelper.php" />
+      <option value="$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Config/ConfigMate.php" />
+      <option value="$PROJECT_DIR$/config/app.php" />
+      <option value="$PROJECT_DIR$/app/controller/My.php" />
+      <option value="$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Data/GuidHelper.php" />
+      <option value="$PROJECT_DIR$/app/controller/Biz.php" />
+      <option value="$PROJECT_DIR$/.env" />
+      <option value="$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/DataConstruct/ResultObject.php" />
+      <option value="$PROJECT_DIR$/app/view/exam/get_some.html" />
+      <option value="$PROJECT_DIR$/app/controller/Exam.php" />
+      <option value="$PROJECT_DIR$/README.md" />
+      <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/exception/ClassNotFoundException.php" />
+      <option value="$PROJECT_DIR$/app/EndUserController.php" />
+      <option value="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" />
+      <option value="$PROJECT_DIR$/config.php" />
+      <option value="$PROJECT_DIR$/node_modules/basiclibrary.javascript/utils/cipherHelper.js" />
+      <option value="$PROJECT_DIR$/app/controller/Open.php" />
+      <option value="$PROJECT_DIR$/node_modules/basiclibrary.javascript/utils/requesHelper.js" />
+      <option value="$PROJECT_DIR$/public/html/index.html" />
+      <option value="$PROJECT_DIR$/public/html/index.js" />
+      <option value="$PROJECT_DIR$/app/view/exam/BL.js" />
+      <option value="$PROJECT_DIR$/app/view/exam/basiclibrary.js" />
+      <option value="$PROJECT_DIR$/.gitignore" />
+      <option value="$PROJECT_DIR$/public/static/libs/basicLibrary.js" />
+      <option value="$PROJECT_DIR$/webpack.config.js" />
+      <option value="$PROJECT_DIR$/app/view/exam/get_emotions.html" />
+      <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Container.php" />
+      <option value="$PROJECT_DIR$/public/index.php" />
+      <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/Http.php" />
+      <option value="$PROJECT_DIR$/vendor/topthink/framework/src/think/App.php" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="diyipingce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diyipingce" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="diyipingce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diyipingce" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="diyipingce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diyipingce" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="hiland" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="diyipingce" type="b2602c69:ProjectViewProjectNode" />
+              <item name="diyipingce" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="hiland" type="462c0819:PsiDirectoryNode" />
+              <item name="basiclibrary.php" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TerminalArrangementManager">
+    <option name="myTabStates">
+      <TerminalTabState tabName="本地" currentWorkingDirectory="E:\myworkspace\Project-php\diyipingce\" commandHistoryFileName="diyipingce-history" />
+    </option>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="EnvTest - 2022.01.05 at 14h 43m 38s.xml">
+      <configuration name="EnvTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest - 2022.01.05 at 14h 44m 27s.xml">
+      <configuration name="EnvTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest - 2022.01.05 at 14h 44m 49s.xml">
+      <configuration name="EnvTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest - 2022.01.05 at 15h 49m 21s.xml">
+      <configuration name="EnvTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest_testA - 2022.01.05 at 15h 52m 04s.xml">
+      <configuration name="EnvTest.testA" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest_testA - 2022.01.05 at 15h 52m 10s.xml">
+      <configuration name="EnvTest.testA" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest_testA - 2022.01.05 at 15h 58m 14s.xml">
+      <configuration name="EnvTest.testA" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest_testGetEnv - 2022.01.05 at 15h 58m 27s.xml">
+      <configuration name="EnvTest.testGetEnv" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest_testGetEnv - 2022.01.05 at 15h 59m 03s.xml">
+      <configuration name="EnvTest.testGetEnv" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="EnvTest_testGetEnv - 2022.01.05 at 16h 24m 04s.xml">
+      <configuration name="EnvTest.testGetEnv" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="232005000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18983175" />
+      <window_info id="Structure" order="1" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Commit" order="3" weight="0.24469641" />
+      <window_info id="Database" order="4" weight="0.27395758" />
+      <window_info id="Pull Requests" order="5" />
+      <window_info id="Bookmarks" order="6" side_tool="true" />
+      <window_info id="Run" order="7" weight="0.32955375" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3298611" />
+      <window_info anchor="bottom" id="TODO" order="3" />
+      <window_info anchor="bottom" id="Eval Reset" order="4" visible="true" weight="0.3298611" />
+      <window_info anchor="bottom" id="重复项" order="5" weight="0.3298611" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.28125" />
+      <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
+      <window_info anchor="bottom" id="Internal Method Tracing" order="8" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.34930557" />
+      <window_info anchor="bottom" id="File Transfer" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Flow" order="14" />
+      <window_info anchor="bottom" id="TypeScript" order="15" />
+      <window_info anchor="bottom" id="Services" order="16" show_stripe_button="false" />
+      <window_info anchor="right" id="Api Debugger" order="0" visible="true" weight="0.3302853" />
+      <window_info anchor="right" id="PlantUML" order="1" />
+      <window_info anchor="right" id="String Manipulation" order="2" />
+      <window_info anchor="right" id="documentation.v2" order="3" side_tool="true" />
+      <window_info anchor="right" id="Hierarchy" order="4" weight="0.3302853" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+      <value>Terminal</value>
+      <value>Run</value>
+      <value>Hierarchy</value>
+      <value>Commit</value>
+      <value>Database</value>
+      <value>Find</value>
+      <value>Debug</value>
+      <value>Api Debugger</value>
+      <value>重复项</value>
+      <value>Eval Reset</value>
+    </recentWindows>
+  </component>
+  <component name="Trusted.Project.Settings" hasCheckedIfOldProject="true" />
+  <component name="WindowStateProjectService">
+    <state x="255" y="15" key="#CLI_解释器" timestamp="1641368200472">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="255" y="15" key="#CLI_解释器/0.0.1366.720@0.0.1366.720" timestamp="1641368200472" />
+    <state x="414" y="2" key="#PHP" timestamp="1642025691197">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="414" y="2" key="#PHP/0.0.1366.720@0.0.1366.720" timestamp="1642025691197" />
+    <state x="153" y="12" width="1060" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1643090604400">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="153" y="12" width="1060" height="708" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.720@0.0.1366.720" timestamp="1643090604400" />
+    <state x="455" y="65" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1643802464780">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="455" y="65" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.720@0.0.1366.720" timestamp="1643802464780" />
+    <state x="275" y="56" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1643703848574">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="275" y="56" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1366.720@0.0.1366.720" timestamp="1643703848574" />
+    <state x="348" y="68" width="748" height="539" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1643708507301">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="348" y="68" width="748" height="539" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.720@0.0.1366.720" timestamp="1643708507301" />
+    <state x="471" y="188" width="408" height="511" key="#com.intellij.tools.ToolEditorDialog" timestamp="1643803737403">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="471" y="188" width="408" height="511" key="#com.intellij.tools.ToolEditorDialog/0.0.1366.720@0.0.1366.720" timestamp="1643803737403" />
+    <state x="360" y="222" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog" timestamp="1643096686892">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="360" y="222" key="#com.intellij.ws.actions.HttpClientConvertFromCurlDialog/0.0.1366.720@0.0.1366.720" timestamp="1643096686892" />
+    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1642765163796">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="413" y="115" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.720@0.0.1366.720" timestamp="1642765163796" />
+    <state x="306" y="189" width="570" height="331" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#" timestamp="1642899822046">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="306" y="189" width="570" height="331" key="#com.jetbrains.php.debug.validation.PhpWebServerValidationDialog#/0.0.1366.720@0.0.1366.720" timestamp="1642899822046" />
+    <state x="463" y="285" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1641633805835">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="463" y="285" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#/0.0.1366.720@0.0.1366.720" timestamp="1641633805835" />
+    <state x="498" y="118" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1642763956887">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="498" y="118" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1366.720@0.0.1366.720" timestamp="1642763956887" />
+    <state x="263" y="15" key="#测试框架" timestamp="1641359209807">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="263" y="15" key="#测试框架/0.0.1366.720@0.0.1366.720" timestamp="1641359209807" />
+    <state x="569" y="243" key="#自定义插件仓库" timestamp="1643097204874">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="569" y="243" key="#自定义插件仓库/0.0.1366.720@0.0.1366.720" timestamp="1643097204874" />
+    <state x="183" y="0" key="#部署" timestamp="1642848876933">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="183" y="0" key="#部署/0.0.1366.720@0.0.1366.720" timestamp="1642848876933" />
+    <state width="201" height="116" key="DebuggerActiveHint" timestamp="1643162294693">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="201" height="116" key="DebuggerActiveHint/0.0.1366.720@0.0.1366.720" timestamp="1643162294693" />
+    <state x="109" y="44" key="FileChooserDialogImpl" timestamp="1643802268074">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="109" y="44" key="FileChooserDialogImpl/0.0.1366.720@0.0.1366.720" timestamp="1643802268074" />
+    <state width="449" height="565" key="GridCell.Tab.0.bottom" timestamp="1643842062363">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="449" height="565" key="GridCell.Tab.0.bottom/0.0.1366.720@0.0.1366.720" timestamp="1643842062363" />
+    <state width="449" height="565" key="GridCell.Tab.0.center" timestamp="1643842062363">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="449" height="565" key="GridCell.Tab.0.center/0.0.1366.720@0.0.1366.720" timestamp="1643842062363" />
+    <state width="449" height="565" key="GridCell.Tab.0.left" timestamp="1643842062363">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="449" height="565" key="GridCell.Tab.0.left/0.0.1366.720@0.0.1366.720" timestamp="1643842062363" />
+    <state width="449" height="565" key="GridCell.Tab.0.right" timestamp="1643842062363">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="449" height="565" key="GridCell.Tab.0.right/0.0.1366.720@0.0.1366.720" timestamp="1643842062363" />
+    <state width="1321" height="174" key="GridCell.Tab.1.bottom" timestamp="1643163301714">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="174" key="GridCell.Tab.1.bottom/0.0.1366.720@0.0.1366.720" timestamp="1643163301714" />
+    <state width="1321" height="174" key="GridCell.Tab.1.center" timestamp="1643163301714">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="174" key="GridCell.Tab.1.center/0.0.1366.720@0.0.1366.720" timestamp="1643163301714" />
+    <state width="1321" height="174" key="GridCell.Tab.1.left" timestamp="1643163301714">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="174" key="GridCell.Tab.1.left/0.0.1366.720@0.0.1366.720" timestamp="1643163301714" />
+    <state width="1321" height="174" key="GridCell.Tab.1.right" timestamp="1643163301714">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="174" key="GridCell.Tab.1.right/0.0.1366.720@0.0.1366.720" timestamp="1643163301714" />
+    <state width="1321" height="174" key="GridCell.Tab.2.bottom" timestamp="1643163301715">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="174" key="GridCell.Tab.2.bottom/0.0.1366.720@0.0.1366.720" timestamp="1643163301715" />
+    <state width="1321" height="174" key="GridCell.Tab.2.center" timestamp="1643163301714">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="174" key="GridCell.Tab.2.center/0.0.1366.720@0.0.1366.720" timestamp="1643163301714" />
+    <state width="1321" height="174" key="GridCell.Tab.2.left" timestamp="1643163301714">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="174" key="GridCell.Tab.2.left/0.0.1366.720@0.0.1366.720" timestamp="1643163301714" />
+    <state width="1321" height="174" key="GridCell.Tab.2.right" timestamp="1643163301714">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="1321" height="174" key="GridCell.Tab.2.right/0.0.1366.720@0.0.1366.720" timestamp="1643163301714" />
+    <state width="248" height="506" key="HiddenNamespacesPopup" timestamp="1643090650684">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state width="248" height="506" key="HiddenNamespacesPopup/0.0.1366.720@0.0.1366.720" timestamp="1643090650684" />
+    <state x="263" y="91" key="IDE.errors.dialog" timestamp="1643089277838">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="263" y="91" key="IDE.errors.dialog/0.0.1366.720@0.0.1366.720" timestamp="1643089277838" />
+    <state x="444" y="76" key="NewPhpClassDialog" timestamp="1642051233566">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="444" y="76" key="NewPhpClassDialog/0.0.1366.720@0.0.1366.720" timestamp="1642051233566" />
+    <state x="65" y="0" key="SettingsEditor" timestamp="1643841708914">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="65" y="0" key="SettingsEditor/0.0.1366.720@0.0.1366.720" timestamp="1643841708914" />
+    <state x="275" y="79" key="Vcs.Push.Dialog.v2" timestamp="1643673720125">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="275" y="79" key="Vcs.Push.Dialog.v2/0.0.1366.720@0.0.1366.720" timestamp="1643673720125" />
+    <state x="539" y="209" width="330" height="206" key="WebDeployment.AddServerDialog.v.1" timestamp="1641367883615">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="539" y="209" width="330" height="206" key="WebDeployment.AddServerDialog.v.1/0.0.1366.720@0.0.1366.720" timestamp="1641367883615" />
+    <state x="497" y="216" width="371" height="288" key="XPathView.InputDialog.DIMENSION_SERVICE_KEY.SIMPLE" timestamp="1641972970865">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="497" y="216" width="371" height="288" key="XPathView.InputDialog.DIMENSION_SERVICE_KEY.SIMPLE/0.0.1366.720@0.0.1366.720" timestamp="1641972970865" />
+    <state x="432" y="96" key="com.jetbrains.php.test.PhpNewTestDialog" timestamp="1641361004277">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="432" y="96" key="com.jetbrains.php.test.PhpNewTestDialog/0.0.1366.720@0.0.1366.720" timestamp="1641361004277" />
+    <state x="458" y="0" width="538" height="536" key="find.popup" timestamp="1641374051358">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="458" y="0" width="538" height="536" key="find.popup/0.0.1366.720@0.0.1366.720" timestamp="1641374051358" />
+    <state x="339" y="160" key="run.anything.popup" timestamp="1643089205184">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="339" y="160" key="run.anything.popup/0.0.1366.720@0.0.1366.720" timestamp="1643089205184" />
+    <state x="346" y="33" width="672" height="686" key="search.everywhere.popup" timestamp="1641961393318">
+      <screen x="0" y="0" width="1366" height="720" />
+    </state>
+    <state x="346" y="33" width="672" height="686" key="search.everywhere.popup/0.0.1366.720@0.0.1366.720" timestamp="1641961393318" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="40" selection-start-line="3" selection-start-column="40" selection-end-line="3" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/basiclibrary.javascript/utils/requesHelper.js" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/libs/basicLibrary.bundle.js" />
+    <entry file="file://$PROJECT_DIR$/app/view/exam/basicLibrary.bundle.js" />
+    <entry file="file://$PROJECT_DIR$/app/controller/Open.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="50" column="33" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="33" />
+          <folding>
+            <element signature="e#6#166#0#PHP" expanded="true" />
+            <element signature="e#195#232#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/hiland/basicLibrary.bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/hiland/basicLibrary.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+    </entry>
+    <entry file="das://8ef144f6-1b83-4993-9c4f-683bcdd7551d/schema/diyipingce/table/dp_emotion_answer">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state lastOpenedTimestamp="1643709121027" presentationMode="TABLE" projectRestartId="08f79574-251e-4fe3-9fb9-46c86bb241eb" pageSize="500">
+          <filtering>
+            <filter text="" />
+          </filtering>
+          <sorting>
+            <sort text="" />
+          </sorting>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/ReflectionNamedType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/facade/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/exception/Handle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ExceptionHandle.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="e#22#67#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/libs/store.js-2.0.12/dist/store.everything.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/store.everything.min.js" />
+    <entry file="file://$PROJECT_DIR$/app/view/exam/get_emotions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="85" column="25" lean-forward="true" selection-start-line="85" selection-start-column="25" selection-end-line="85" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/common.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/provider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/middleware.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1176">
+          <caret line="770" column="10" selection-start-line="770" selection-start-column="10" selection-end-line="770" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/Reflector.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/ReflectionParameter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="232" column="20" selection-start-line="232" selection-start-column="20" selection-end-line="232" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Middleware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="24" column="16" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Http.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="187" column="28" lean-forward="true" selection-start-line="187" selection-start-column="28" selection-end-line="187" selection-end-column="28" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+            <element signature="e#641#665#0#PHP" expanded="true" />
+            <element signature="e#820#847#0#PHP" />
+            <element signature="e#873#915#0#PHP" />
+            <element signature="e#942#984#0#PHP" />
+            <element signature="e#1011#1053#0#PHP" />
+            <element signature="e#1085#1127#0#PHP" />
+            <element signature="e#1333#1433#0#PHP" />
+            <element signature="e#1438#1535#0#PHP" />
+            <element signature="e#1541#1610#0#PHP" />
+            <element signature="e#1615#1694#0#PHP" />
+            <element signature="e#1700#1800#0#PHP" />
+            <element signature="e#1805#2011#0#PHP" />
+            <element signature="e#2017#2086#0#PHP" />
+            <element signature="e#2091#2170#0#PHP" />
+            <element signature="e#2176#2245#0#PHP" />
+            <element signature="e#2250#2333#0#PHP" />
+            <element signature="e#2339#2420#0#PHP" />
+            <element signature="e#2425#2519#0#PHP" />
+            <element signature="e#2525#2623#0#PHP" />
+            <element signature="e#2628#2735#0#PHP" />
+            <element signature="e#2741#2808#0#PHP" />
+            <element signature="e#2813#2885#0#PHP" />
+            <element signature="e#3509#3531#0#PHP" />
+            <element signature="e#4146#4405#0#PHP" />
+            <element signature="e#4411#4437#0#PHP" />
+            <element signature="e#4442#4672#0#PHP" />
+            <element signature="e#4678#4746#0#PHP" />
+            <element signature="e#4751#5098#0#PHP" />
+            <element signature="e#5104#5223#0#PHP" />
+            <element signature="e#5228#5341#0#PHP" />
+            <element signature="e#5347#5492#0#PHP" />
+            <element signature="e#5497#5637#0#PHP" />
+            <element signature="e#5643#5722#0#PHP" />
+            <element signature="e#5727#5962#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Env.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3287">
+          <caret line="63" column="20" selection-start-line="63" selection-start-column="20" selection-end-line="63" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="455" column="9" selection-start-line="455" selection-start-column="9" selection-end-line="455" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="131" column="20" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Core/Core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="369" column="9" selection-start-line="369" selection-start-column="9" selection-end-line="369" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="239" selection-start-line="238" selection-end-line="239" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+            <element signature="e#641#665#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/hiland/basiclibrary.php/Utils/Data/ObjectHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="396" column="7" selection-start-line="396" selection-start-column="7" selection-end-line="396" selection-end-column="7" />
+          <folding>
+            <element signature="e#37#50#0#PHP" expanded="true" />
+            <element signature="e#162#424#0#PHP" />
+            <element signature="e#429#691#0#PHP" />
+            <element signature="e#697#787#0#PHP" />
+            <element signature="e#792#923#0#PHP" />
+            <element signature="e#929#1027#0#PHP" />
+            <element signature="e#1032#1169#0#PHP" />
+            <element signature="e#1175#1667#0#PHP" />
+            <element signature="e#1672#2124#0#PHP" />
+            <element signature="e#2130#2315#0#PHP" />
+            <element signature="e#2320#3062#0#PHP" />
+            <element signature="e#3068#3183#0#PHP" />
+            <element signature="e#3188#4075#0#PHP" />
+            <element signature="e#4081#4252#0#PHP" />
+            <element signature="e#4608#4685#0#PHP" />
+            <element signature="e#4690#5358#0#PHP" />
+            <element signature="e#5364#5442#0#PHP" />
+            <element signature="e#5447#5702#0#PHP" />
+            <element signature="e#5708#5777#0#PHP" />
+            <element signature="e#5782#5869#0#PHP" />
+            <element signature="e#5875#6197#0#PHP" />
+            <element signature="e#6202#7282#0#PHP" />
+            <element signature="e#7288#7401#0#PHP" />
+            <element signature="e#7406#7485#0#PHP" />
+            <element signature="e#7491#7561#0#PHP" />
+            <element signature="e#7566#7649#0#PHP" />
+            <element signature="e#7655#7872#0#PHP" />
+            <element signature="e#7877#8193#0#PHP" />
+            <element signature="e#8199#8298#0#PHP" />
+            <element signature="e#8303#8830#0#PHP" />
+            <element signature="e#8836#9653#0#PHP" />
+            <element signature="e#9659#9933#0#PHP" />
+            <element signature="e#9938#10054#0#PHP" />
+            <element signature="e#10060#10153#0#PHP" />
+            <element signature="e#10158#10622#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/service.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_7.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="436" column="9" selection-start-line="436" selection-start-column="9" selection-end-line="436" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/event.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/ReflectionGenerator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="69" column="15" selection-start-line="69" selection-start-column="15" selection-end-line="69" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/ReflectionFunctionAbstract.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/ReflectionMethod.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+          <folding>
+            <element signature="e#7#41#0#PHP" expanded="true" />
+            <element signature="e#485#597#0#PHP" />
+            <element signature="e#638#725#0#PHP" />
+            <element signature="e#831#886#0#PHP" />
+            <element signature="e#925#980#0#PHP" />
+            <element signature="e#1018#1076#0#PHP" />
+            <element signature="e#1117#1173#0#PHP" />
+            <element signature="e#1212#1269#0#PHP" />
+            <element signature="e#1310#1364#0#PHP" />
+            <element signature="e#1402#2119#0#PHP" />
+            <element signature="e#2347#2915#0#PHP" />
+            <element signature="e#3022#3270#0#PHP" />
+            <element signature="e#3341#3550#0#PHP" />
+            <element signature="e#3629#3841#0#PHP" />
+            <element signature="e#3921#4139#0#PHP" />
+            <element signature="e#4221#4436#0#PHP" />
+            <element signature="e#4517#4723#0#PHP" />
+            <element signature="e#4801#5010#0#PHP" />
+            <element signature="e#5089#5317#0#PHP" />
+            <element signature="e#5401#5626#0#PHP" />
+            <element signature="e#5709#6056#0#PHP" />
+            <element signature="e#6219#7096#0#PHP" />
+            <element signature="e#7178#7830#0#PHP" />
+            <element signature="e#7885#8503#0#PHP" />
+            <element signature="e#8658#8929#0#PHP" />
+            <element signature="e#9028#9338#0#PHP" />
+            <element signature="e#9433#9702#0#PHP" />
+            <element signature="e#9891#10190#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/Reflection/ReflectionFunction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding>
+            <element signature="e#7#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="445" column="37" lean-forward="true" selection-start-line="445" selection-start-column="37" selection-end-line="445" selection-end-column="37" />
+          <folding>
+            <element signature="e#6#80#0#PHP" expanded="true" />
+            <element signature="e#641#657#0#PHP" expanded="true" />
+            <element signature="e#1168#1223#0#PHP" />
+            <element signature="e#1261#1306#0#PHP" />
+            <element signature="e#1343#1386#0#PHP" />
+            <element signature="e#1418#1459#0#PHP" />
+            <element signature="e#1501#1577#0#PHP" />
+            <element signature="e#1582#1866#0#PHP" />
+            <element signature="e#1872#1981#0#PHP" />
+            <element signature="e#1986#2088#0#PHP" />
+            <element signature="e#2094#2228#0#PHP" />
+            <element signature="e#2233#2547#0#PHP" />
+            <element signature="e#2553#2768#0#PHP" />
+            <element signature="e#2957#3068#0#PHP" />
+            <element signature="e#3299#3474#0#PHP" />
+            <element signature="e#3479#4081#0#PHP" />
+            <element signature="e#4147#4286#0#PHP" />
+            <element signature="e#4175#4461#0#PHP" />
+            <element signature="e#4467#4613#0#PHP" />
+            <element signature="e#4618#4804#0#PHP" />
+            <element signature="e#4810#4922#0#PHP" />
+            <element signature="e#4927#5068#0#PHP" />
+            <element signature="e#5074#5182#0#PHP" />
+            <element signature="e#5187#5267#0#PHP" />
+            <element signature="e#5273#5385#0#PHP" />
+            <element signature="e#5390#5548#0#PHP" />
+            <element signature="e#5554#5755#0#PHP" />
+            <element signature="e#6405#6510#0#PHP" />
+            <element signature="e#6515#6697#0#PHP" />
+            <element signature="e#6703#6870#0#PHP" />
+            <element signature="e#7265#7454#0#PHP" />
+            <element signature="e#8362#8546#0#PHP" />
+            <element signature="e#8551#8745#0#PHP" />
+            <element signature="e#8751#8939#0#PHP" />
+            <element signature="e#9380#9522#0#PHP" />
+            <element signature="e#10457#10606#0#PHP" />
+            <element signature="e#10611#11050#0#PHP" />
+            <element signature="e#12537#12729#0#PHP" />
+            <element signature="e#12734#12980#0#PHP" />
+            <element signature="e#13488#13572#0#PHP" />
+            <element signature="e#13578#13652#0#PHP" />
+            <element signature="e#13658#13743#0#PHP" />
+            <element signature="e#13749#13821#0#PHP" />
+            <element signature="e#13827#13944#0#PHP" />
+            <element signature="e#13950#14056#0#PHP" />
+            <element signature="e#14062#14177#0#PHP" />
+            <element signature="e#14183#14286#0#PHP" />
+            <element signature="e#14308#14388#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/think-helper/src/helper/Str.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="15" column="11" selection-start-line="15" selection-end-line="19" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/topthink/framework/src/think/facade/Cache.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/exam/get_some.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/html/index.bundle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/hiland/basiclibrary.php/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

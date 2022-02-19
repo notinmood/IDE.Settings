@@ -45,16 +45,6 @@ GroupAdd,TabGroup_all ,ahk_exe DocBox.exe
 
 
 
-
-
-#IfWinActive,ahk_group TabGroup_all
-
-#IfWinActivet
-
-
-
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;第一段自定义部分结束
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2123,12 +2113,6 @@ Return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 1.2. 局部热字母/热键
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#IfWinActive,ahk_group DevGroup_all
-~LButton & t:: ;;是否在某开发工具内有效，进行测试。（按下鼠标左键和键盘t键）
-{
-	MsgBox,hello developer, this is a test 。
-}
-Return
 
 ;;;将单侧标点符号，自动输入为双侧标点符号
 ;[::wrapContent("[","]")
@@ -2485,22 +2469,6 @@ $F10:: ;;在 msedge 中设置快捷键 ctrl+0 (调用沙拉词典)
     Send,^0
 return
 
-#IfWinActive ahk_group DevGroup_jet
-{
-    ;;;方法级的运行(在待运行的方法上右键，选择"运行...(Ctrl+Shift+F10)")，在ide内找不到重新分配快捷键。暂时在ahk内映射。
-    f5::^+f10
-
-    f6::PressKeyManyTimes("press_1_f6_event","press_2_f6_event",300)
-
-    press_1_f6_event(){
-        send,^+{NumpadMult}{1}
-    }
-
-    press_2_f6_event(){
-        send,^+{-}
-    }
-}
-#IfWinActive
 
 
 ;;用Alt+↑ 、Alt+↓ 映射查找结果集的上一条、下一条
@@ -2849,11 +2817,11 @@ return
 	;Send,->
 	;return	
 
-	;【3】注释符号的替换
-	:*:///:: ;;将///注释转换成/**注释
-	SendInput {text}/**
-	Send,{enter}
-	return	
+	; ;【3】注释符号的替换
+	; :*:///:: ;;将///注释转换成/**注释
+	; SendInput {text}/**
+	; Send,{enter}
+	; return	
 
 	;;;将win+f替换为文件全局格式化
 	#f::send,!+^l
@@ -2863,11 +2831,11 @@ return
 ;在开发环境webstorm中的映射
 #IfWinActive ahk_exe webstorm64.exe
 {
-	;【1】注释符号的替换
-	:*:///:: ;;将///注释转换成/**注释
-	SendInput {text}/**
-	Send,{enter}
-	return	
+	; ;【1】注释符号的替换
+	; :*:///:: ;;将///注释转换成/**注释
+	; SendInput {text}/**
+	; Send,{enter}
+	; return	
 
 }
 #IfWinActive
@@ -2919,6 +2887,45 @@ rbutton::
   xpos1:=xpos2,ypos1:=ypos2
   return
 */
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 各软件专用的热键、热字母在前面；通用的热键、热字母在后面。
+;;; 这样能保证从上到下的生效优先级。
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+#IfWinActive,ahk_group DevGroup_all
+{
+~LButton & t:: ;;是否在某开发工具内有效，进行测试。（按下鼠标左键和键盘t键）
+{
+	MsgBox,hello developer, this is a test 。
+}
+
+;【3】注释符号的替换
+:*:///:: ;;将///注释转换成/**注释
+    SendInput {text}/**
+    sleep,200
+    Send,{enter}
+return
+}
+
+
+#IfWinActive ahk_group DevGroup_jet
+{
+    ;;;方法级的运行(在待运行的方法上右键，选择"运行...(Ctrl+Shift+F10)")，在ide内找不到重新分配快捷键。暂时在ahk内映射。
+    f5::^+f10
+
+    f6::PressKeyManyTimes("press_1_f6_event","press_2_f6_event",300)
+
+    press_1_f6_event(){
+        send,^+{NumpadMult}{1}
+    }
+
+    press_2_f6_event(){
+        send,^+{-}
+    }
+}
+#IfWinActive
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;自定义函数部分
@@ -3158,30 +3165,30 @@ return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;以下为研究学习
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-LButton & s::
-	myData:= 123
-	if (myData is number)	
-	{
-		MsgBox,%myData% is number.
-	}
+; LButton & s::
+; 	myData:= 123
+; 	if (myData is number)	
+; 	{
+; 		MsgBox,%myData% is number.
+; 	}
 
-	if (myData is integer)
-	{
-		MsgBox,%myData% is integer.
-	}
+; 	if (myData is integer)
+; 	{
+; 		MsgBox,%myData% is integer.
+; 	}
 
-	if (myData is alpha)
-	{
-		MsgBox,%myData% is string.
-	}
+; 	if (myData is alpha)
+; 	{
+; 		MsgBox,%myData% is string.
+; 	}
 
-	if (myData is space)
-	{
-		MsgBox,%myData% is space.
-	}
+; 	if (myData is space)
+; 	{
+; 		MsgBox,%myData% is space.
+; 	}
 
-	if (myData is time)
-	{
-		MsgBox,%myData% is datetime.
-	}
-return
+; 	if (myData is time)
+; 	{
+; 		MsgBox,%myData% is datetime.
+; 	}
+; return

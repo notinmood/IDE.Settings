@@ -1,6 +1,7 @@
 ﻿#NoEnv
 #SingleInstance, Force
-#NoTrayIcon
+;;为了便于观察运行情况，需要显示托盘图标
+;;#NoTrayIcon
 #MaxHotkeysPerInterval 200
 
 FileEncoding, utf-8
@@ -11,11 +12,15 @@ SetWorkingDir %A_ScriptDir%
 ;;;第一段自定义部分开始
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 1.0. 定义软件组
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;常用的几个软件组 
 ;;DevGroup_jet jetBrain的开发工具
 ;;DevGroup_ms 微软的开发工具
 ;;DevGroup_other 其他厂商的开发工具
 ;;DevGroup_all 所有类型的开发工具
+;;TabGroup_all 所有拥有tab功能的应用组
 
 GroupAdd,DevGroup_jet ,ahk_class SunAwtFrame ;所有jetBrains公司开发工具
 GroupAdd,DevGroup_ms ,ahk_exe Code.exe ;ms的visual studio code
@@ -26,63 +31,29 @@ GroupAdd,DevGroup_all ,ahk_group DevGroup_jet
 GroupAdd,DevGroup_all ,ahk_group DevGroup_ms
 GroupAdd,DevGroup_all ,ahk_group DevGroup_other
 
-#IfWinActive,ahk_group DevGroup_all
-~LButton & t:: ;;是否在某开发工具内有效，进行测试。（按下鼠标左键和键盘t键）
-{
-	MsgBox,hello developer, this is a test 。
-}
-Return
+;;;TabGroup_all 所有拥有tab功能的应用组
+GroupAdd,TabGroup_all ,ahk_group DevGroup_all
+;;微软的Edge浏览器
+GroupAdd,TabGroup_all ,ahk_exe msedge.exe
+;;Windows的资源管理器
+GroupAdd,TabGroup_all ,ahk_exe Explorer.EXE
+;;稻壳阅读器
+GroupAdd,TabGroup_all ,ahk_exe DocBox.exe
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 1.0. 定义软件组（结束）
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;将单侧标点符号，自动输入为双侧标点符号
-;[::wrapContent("[","]")
-;(::wrapContent("(",")")
-;<::wrapContent("<",">")
-;{::wrapContent("{","}")
 
-;;;在开发工具内全部使用英文标点
-;;; ["。","."],["，",","],["；",";"],["（","("],["）",")"]
-:*:.::{text}.
-:*:,::{text},
-:*:;::{text};
-:*:"::{text}"
-:*:'::{text}'
-:*:<::{text}<
-:*:>::{text}>
-:*:(::{text}(
-:*:)::{text})
-;;;:*:、::{text}/
+
+
+
+#IfWinActive,ahk_group TabGroup_all
 
 #IfWinActivet
 
-;;;;退出当前ahk应用程序（慎用）
-;esc::exitapp
 
 
-wrapContent(prefixer,postfixer){
-		clipboard=
-		sleep,200
-		send,^c
-		clipwait,2
-			
 
-		
-		;;需要判断剪切板内的数据是否以回车换行结尾。
-		_len := StrLen(clipboard)
-		_last := SubStr(clipboard, -1)
-		if  _last = `r`n
-		{
-			;Msgbox,回车换行
-			_newLen:= _len-2
-			clipboard:= SubStr(clipboard, 1,_newLen)
-			
-		}
-
-		
-		send,{text}%prefixer%
-		send,{text}%clipboard%
-		send,{text}%postfixer%
-		return
-}
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;第一段自定义部分结束
@@ -2113,28 +2084,153 @@ return
 ;;;第二段自定义部分开始
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 1.1.  全局热字母 (更多全局热键，在文档末尾)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;快速输入日期的热字符串
+;;2021-06-17
+:*:\\dd::
+	FormatTime, now_date, %A_Now%, yyyy-MM-dd ;格式化当前时间
+	Send, {text}%now_date% ;发送
+Return
+
+;;快速输入日期时间的热字符串
+;;2021-06-17 10:17:00
+:*:\\dt::
+	FormatTime, now_date, %A_Now%, yyyy-MM-dd HH:mm:ss ;格式化当前时间
+	Send, {text}%now_date% ;发送
+Return
+
+;;快速输入 段落分隔符
+:*:---:: ;8个长度差不多占比手机屏幕全长
+	Send,────────────────────────
+Return
+
+:*:===:: ;8个长度差不多占比手机屏幕全长
+	Send,════════════════════════
+Return
+
+; :*:,,,:: ;8个长度差不多占比手机屏幕全长
+; 	Send,┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+; Return
+
+:*:\\\\::{text}\\
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 1.1. 全局热字母 结束
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 1.2. 局部热字母/热键
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#IfWinActive,ahk_group DevGroup_all
+~LButton & t:: ;;是否在某开发工具内有效，进行测试。（按下鼠标左键和键盘t键）
+{
+	MsgBox,hello developer, this is a test 。
+}
+Return
+
+;;;将单侧标点符号，自动输入为双侧标点符号
+;[::wrapContent("[","]")
+;(::wrapContent("(",")")
+;<::wrapContent("<",">")
+;{::wrapContent("{","}")
+
+;;;在开发工具内全部使用英文标点
+;;; ["。","."],["，",","],["；",";"],["（","("],["）",")"]
+
+; :*:.::{text}.
+; :*:,::{text},
+; :*:;::{text};
+; :*:"::{text}"
+; :*:'::{text}'
+; :*:<::{text}<
+; :*:>::{text}>
+; :*:(::{text}(
+; :*:)::{text})
+;;;:*:、::{text}/
+
+:*:aaa::
+:*:kkx::
+    send, {text}()
+    send, {left}
+return
+
+:*:bbb::
+:*:kkz::
+    send, {text}[]
+    send, {left}
+return
+
+:*:ccc::
+:*:kkd::
+    send, {text}{}
+    send, {left}
+return
+
+:*:yyy::
+    send, {text}""
+    send, {left}
+return
+
+;将 sss替换为 ${} 符号
+:*:sss::
+	SendInput, {text} ${}
+	send, {left}
+return
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 1.2. 局部热字母/热键(结束)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#IfWinActivet
+
+;;;将esc的单击默认原来的操作；双击设置为关闭tab; 三击设置为应用程序。
+~esc:: 
+	PressKeyManyTimes("","press_2_esc_event4common","press_3_esc_event4common",500)		
+	return
+
+	press_2_esc_event4common()
+	{
+		;;暂时不使用ctrl+w键
+		;;Send,^w
+		;;目前大部分应用都支持ctrl+f4
+		Send,^{f4}
+	}
+
+	press_3_esc_event4common()
+	{
+		;;暂时不使用ctrl+w键
+		;;Send,^w
+		;;目前大部分应用都支持ctrl+f4
+		Send,!{f4}
+	}
+
+;;;;退出当前ahk应用程序（慎用）
+;esc::exitapp
+
 ;;显示当前AHK的版本号
 ~LButton & v::
     Msgbox, AHK的版本为:%A_AhkVersion%
 return
 
+;;;使用PrtSc按键调用搜狗输入法的截屏功能(需要先把搜狗输入法的截屏快捷键设置为ctrl+alt+s)
+PrintScreen::^!s
+
 ;;;有时候，一手握着鼠标，另一只手ctrl+c，ctrl+v，这时候想按下换行手还要移动很远，去按enter键很麻烦.索性把CapsLock键换成enter键。
-;;;把CapsLock转成End键,在写代码的时候更常用.
+;;;把CapsLock和右侧alt转成End键,在写代码的时候更常用.
 $CapsLock::End
+$Ralt::End
 
-$!f4:: 
-	
-return
 
-;;关闭当前应用程序,改为alt+esc
-!esc::!f4
+;;关闭当前应用程序,改为alt+esc(暂时不使用这个功能)
+;;!esc::!f4
+
 ;;关闭当前窗口(如果一个app有多个打开的窗口的话,就是关闭当前使用中的一个)
 !w::^w
 
 
 ;;修复z键，(因为键盘键位z坏了--点击一次z经常出现多个z，现在进行修复)
 ;$z::PressKeyManyTimes("filter_z","filter_z","filter_z",120)
-
 filter_z(){
 	send,{z}
 }
@@ -2142,7 +2238,7 @@ filter_z(){
 ;;左边Alt是将中文标点符号转换为英文标点符号;右Alt是将英文标点符号替换为中文标点符号
 ;;Alt双击是替换刚才输入的最后一个标点符号;Alt三连击是替换光标所在整个行内的标点符号
 ~Lalt::PressKeyManyTimes("lalt_event_kp1","lalt_event_kp2","lalt_event_kp3")
-~Ralt::PressKeyManyTimes("ralt_event_kp1","ralt_event_kp2","ralt_event_kp3")
+;;;~Ralt::PressKeyManyTimes("ralt_event_kp1","ralt_event_kp2","ralt_event_kp3")
 
 ;GetMarker_CN_EN := "。，；？"
 
@@ -2191,10 +2287,19 @@ ralt_event_kp3(){
 ;	send, {esc}
 ;return
 
-;;格式刷
+;;格式刷(奇数次复制格式，偶数次的时候粘贴格式。无论是复制格式还是粘贴格式，都需要先选中目标文本)
 $#f::
-	Send,^+c
+	global wfPressCount += 1 
+
+	if(mod(wfPressCount,2)=0){
+		;msgbox,偶数
+		Send,^+v
+	}else{
+		;msgbox,奇数
+		Send,^+c
+	}
 return
+
 
 
 ;;;以下方向键重定义，使用space方案代替alt方案。暂时注释。
@@ -2274,7 +2379,7 @@ return
 ~RShift::Send, #{Space}
 ;========================
 ;左Shift 在sogou输入法内，进行中英文的切换（在搜狗输入法内设置）
-~LShift::	
+~LShift::
     switch_sg_ime(1)
     send,+	    
 return
@@ -2318,8 +2423,8 @@ PrintScreen & m::
 #m::
 #!^m::send ^!m
 
-PrintScreen & s::
-#!^s::run "D:\tools\office\Snipaste-2.5.6-Beta-x64\Snipaste.exe"
+; PrintScreen & s::
+; #!^s::run "D:\tools\office\Snipaste-2.5.6-Beta-x64\Snipaste.exe"
 PrintScreen & e::
 #!^e::run "C:\Program Files\Everything\Everything.exe"
 
@@ -2352,10 +2457,6 @@ UserDisplay(){
 }
 
 
-
-
-
-
 ;;;;;;;;;;;;;删除一整行
 $!d::   ;alt+d
 	Send, {Home}   ;输出回车
@@ -2380,13 +2481,25 @@ return
 ;return
 
 
-;;修改ahk脚本之后，按F5重新载入脚本
-;;(现在一般都是在editplus里面修改，所以加入对环境的判断)
-;;
-#IfWinActive ahk_exe editplus.exe
-$F5::
-	reload
+$F10:: ;;在 msedge 中设置快捷键 ctrl+0 (调用沙拉词典)
+    Send,^0
 return
+
+#IfWinActive ahk_group DevGroup_jet
+{
+    ;;;方法级的运行(在待运行的方法上右键，选择"运行...(Ctrl+Shift+F10)")，在ide内找不到重新分配快捷键。暂时在ahk内映射。
+    f5::^+f10
+
+    f6::PressKeyManyTimes("press_1_f6_event","press_2_f6_event",300)
+
+    press_1_f6_event(){
+        send,^+{NumpadMult}{1}
+    }
+
+    press_2_f6_event(){
+        send,^+{-}
+    }
+}
 #IfWinActive
 
 
@@ -2406,20 +2519,13 @@ return
 	;;;将F4设置为关闭tab
 	;F4::Send,^w
 
-	;;;将双击esc设置为关闭tab
-	~esc::
-		PressKeyManyTimes("press_1_esc_event4edge","press_2_esc_event4edge","press_2_esc_event4edge",400)		
-		return
-
-		press_1_esc_event4edge()
-		{
-			send,{esc}
-		}
-
-		press_2_esc_event4edge()
-		{
-			Send,^w
-		}
+    ;;将F8设置为简阅的快捷键(需要提前设置简阅的快捷键为ctrl+r)
+    F8::
+        send, F4
+        send, ^c
+        send, {read://}
+        send, ^v
+        return
 
 	;;;双击左键关闭当前tab
 	;LButton::
@@ -2440,96 +2546,102 @@ return
 
 	;【2】将 Alt+↓ 映射查找结果集的下一条h
 	!down::send,!f
+
+    ;;;以下代码验证~符号的功能：~是保留原来按键功能的基础上加入新定义的功能
+    ;;; - 如果不加~符号，那么按下a的时候会输出 BBB
+    ;;; - 如果加上~符号，那么按下a的时候会输出 aBBB
+    ; ~a::Send BBB
+}
+#IfWinActive
+
+;;3、在资源管理器中
+#IfWinActive ahk_exe Explorer.EXE
+{
+
 }
 #IfWinActive
 
 
-;如果是在onenote中，就映射F系列快捷键
+;;4、在腾讯的桌面管理器中
+#IfWinActive ahk_exe DesktopMgr64.exe
+{
+    ~esc:: 
+	PressKeyManyTimes("","press_2_esc_event4DesktopMgr","",300)		
+	return
+
+	press_2_esc_event4DesktopMgr()
+	{
+		click right
+        ;;根据右键菜单的情况设置down,up的数量，使其定位到"一键桌面整理"
+        Send, v
+        Send, v
+        Send, {down}{down}{down}{down}{down}{enter}
+	}
+}
+#IfWinActive
+
+;;;5. 如果是在onenote中，就映射F系列快捷键
 #IfWinActive ahk_exe ONENOTE.EXE
 {
-	F1::
-	F4:: ;标题重映射
+	F4:: ;标题重映射1
 		Send,^!1
 		Send,!hul{end}{up}{up}{up}{up}{left}{left}{left}{enter}
 		return
-	F5:: ;带修饰符的正文
-		Send,^+n
+
+	F3:: ;标题重映射2		
+		;;使用下划线
+		Send,{home}
+		Send,{text}§
+		;Send,{space}
+		Send,{home}{space}+{end}
+		
+		Send,^!2
+		Send,^u
+		Send,^b
+		;;不使用前缀箭头
+		;Send,!hul{end}{up}{up}{left}{left}{left}{left}{enter}
+		return
+
+    F2:: ;有序列表显示
+        Send,^/
+        return
+
+    F1:: ;无序列表显示(用一个短横线开头)
+    	Send,^+n
 		Send,!hul{end}{up}{left}{left}{left}{enter}
 		return
-	
 
-	F6:: ;标题2，阿拉伯数字序号重映射
-		Send,^!2
-		Send,!hn{home}{down}{right}{right}{enter}
-		return
-	F7:: ;标题3，英文大写序号重映射
-		Send,^!3
-		Send,!hn{home}{down}{down}{enter}
-		return
-	
-	;;;把不常用的都屏蔽掉
-	;F2:: ;标题重映射
-	;	Send,^!2
-	;	Send,!hul{end}{up}{up}{left}{left}{left}{enter}
-	;	return
-	;F3:: ;标题重映射
-	;	Send,^!3
-	;	Send,!hul{end}{up}{up}{up}{left}{left}{left}{enter}
-	;	return
-
-	;F5:: ;标题1,汉字序号重映射
-	;	Send,^!1
-	;	Send,!hn{home}{down}{down}{right}{right}{right}{enter}
-	;	return
-
-;	F8:: ;突出显示，
-;		Send,!hi{home}{down}{down}{right}{right}{right}{enter}
-;		;Send,!hfc{home}{down}{down}{down}{down}{enter}
-;		return
-;	F9:: ;标题重映射
-;		PressKeyManyTimes("press_1_f9_event","press_2_f9_event","press_2_f9_event")		
-;		return
-;
-;		press_1_f9_event(){
-;			global __f9_pressed_count
-;			if(__f9_pressed_count="" or __f9_pressed_count=1)	{
-;				Send,!hul{end}{up}{up}{up}{left}{left}{enter}
-;			}
-;
-;			if(__f9_pressed_count=2)	{
-;				Send,!hul{home}{down}{down}{down}{enter}
-;			}
-;
-;			if(__f9_pressed_count=3)	{
-;				Send,!hul{home}{down}{down}{right}{enter}
-;			}
-;		}
-;
-;		press_2_f9_event(){
-;			global __f9_pressed_count
-;			if(__f9_pressed_count>=3){
-;				__f9_pressed_count:=1
-;			}else{
-;				__f9_pressed_count++
-;			}
-;
-;			MsgBox,0,,% "当前用的标注号为:"__f9_pressed_count,1
-;
-;		}
-
-
-
-	F8:: ;清除所有的格式
+    F5:: ;清除所有的格式,并保持行首没有缩进
 		Send,^+n
-		return
-	F9:: ;用表格格式化信息
+		Send,+{tab}
+        Send,+{tab}
+		return    
+	
+    F6:: ;;突出显示（加粗，加下划线)
+        Send,^b
+        Send,^u
+        return    	
+    	
+    F7:: ;背景突出
+        Send,!hfc{down}{enter}
+        Send,!hi{down}{right}{right}{right}{right}{enter}
+        return
+    
+    f8:: ;行首突出(红色行首)
+    space & r:: 
+        myfunc_em()
+        ;Send, !hi
+        Send, {home}{down}{down}{down}{down}{down}{down}{right}{right}{right}{right}{right}{enter}
+    return
+
+    F9:: ;用表格格式化信息
 		Send,!nt{enter}	
 		;Send,^i
 		click right
 		Send,ah{down}{right}{down}{enter}
 		return
 
-	PrintScreen & F9:: ;用表格格式化信息
+	space & f9:: ;用表格格式化信息
 		Send,!nt{enter}	
 		
 		click right
@@ -2537,10 +2649,49 @@ return
 		click right
 		Send,ah{down}{right}{home}{down}{right}{right}{right}{right}{right}{right}{enter}
 		return
+    
+    f11:: ;补充说明性质的文字
+        myfunc_em()
+        ; ;Send, !hfc
+        Send, {home}{down}{down}{right}{enter}
+        Send, {home}+{end}
+        Send, !hfs9{enter} 
+        send, {esc}
+        send, {end}
+    return
 
-	F12:: ;代码格式化
+    F12:: ;代码格式化(需要安装代码高亮插件NoteHighLight)
 		Send,!yc
 		return
+
+    ;;;绿色行首
+    space & g::
+        myfunc_em()
+        Send, {home}{down}{down}{down}{down}{down}{down}{right}{right}{right}{right}{right}s{right}{right}{right}{right}{enter}
+    return
+
+    ;;;紫色行首
+    space & t::
+        myfunc_em()
+        Send, {home}{down}{right}{right}{right}{right}s{right}{right}{right}{right}{enter}
+    return
+
+    ;;;最近的一次颜色
+    space & f::
+        myfunc_em()
+        ;Send,{esc}
+        Send, ^!h
+    return
+
+    myfunc_em(){
+        Send,{home}
+        Send, ▌
+        Send, {home}
+        Send, +{right}
+        Send, !hfc
+        ;;Send, ^!h
+    }
+	
 
 	~esc:: ;调用历史面板
 		PressKeyManyTimes("press_1_esc_event","press_2_esc_event","press_2_esc_event",300)		
@@ -2556,56 +2707,128 @@ return
 			Send,!sea
 		}
 
-	;普通文本格式粘贴信息
-	^b::		
-		;Send,!hvt
-		click right
-		Send, {down}{down}{down}{right}{right}{enter}
-		return
-	#f:: ;格式刷
-		Send,!hfp
-		;Send,!hfp
-		return
-	$!f::
-		clipboard=
+	
+	$^b:: ;以普通文本格式粘贴信息
+		;;1、调用窗口菜单方式
+		Send,!hvt
 		sleep,200
-		send,^c
-		clipwait,2
-		Loop
-		{
-			StringReplace, clipboard,clipboard, `r`n,`n, UseErrorLevel
-			if ErrorLevel = 0 ;全部替换完，退出循环
-			break
-		}
-		Loop
-		{
-			StringReplace, clipboard,clipboard, `n`n`n,`n-----------------------------`n, UseErrorLevel
-			if ErrorLevel = 0 ;全部替换完，退出循环
-			break
-		}
-		Loop
-		{
-			StringReplace, clipboard,clipboard, %A_SPACE%,, UseErrorLevel;替换空格
-			if ErrorLevel = 0
-			break
-		}
-		Send,{text}%clipboard%
+		send,{esc} ;;去掉悬浮的ctrl选项卡
+		;;2、调用右键菜单方式(不能很好判断I形状的文本输入点，默认是在鼠标箭头光标地方插入。暂时不使用本方法。)
+		;click right
+		;Send, {down}{down}{down}{right}{right}{enter}
+    return
 
-		sleep,400
-		send,{esc}
-		return
+
+
+	; $!f::
+	; 	clipboard=
+	; 	sleep,200
+	; 	send,^c
+	; 	clipwait,2
+	; 	Loop
+	; 	{
+	; 		StringReplace, clipboard,clipboard, `r`n,`n, UseErrorLevel
+	; 		if ErrorLevel = 0 ;全部替换完，退出循环
+	; 		break
+	; 	}
+	; 	Loop
+	; 	{
+	; 		StringReplace, clipboard,clipboard, `n`n`n,`n-----------------------------`n, UseErrorLevel
+	; 		if ErrorLevel = 0 ;全部替换完，退出循环
+	; 		break
+	; 	}
+	; 	Loop
+	; 	{
+	; 		StringReplace, clipboard,clipboard, %A_SPACE%,, UseErrorLevel;替换空格
+	; 		if ErrorLevel = 0
+	; 		break
+	; 	}
+	; 	Send,{text}%clipboard%
+
+	; 	sleep,400
+	; 	send,{esc}
+	; 	return
 }   
 #IfWinActive
 
-;;;在onenote打开的代码高亮插件中
-#IfWinActive ahk_exe DllHost.exe
+;;;6. 在MyLifeOrganized中配置快捷键(大部分功能在MLO内部配置，此处仅配置其软件本身无法完成的)
+#IfWinActive ahk_exe mlo.exe
 {
-	;;;用esc调用alt+f4关闭窗口
-	esc::send,!{f4}
+    ;;显示当前AHK的版本号
+    ~LButton & f1::
+        Msgbox, F9删除; `nF4移动条目; `nF4双击快速移动条目(移动到上次的目标位置)
+    return
+
+
+    ;;;暂时不使用本段脚本，因为mlo支持 alt+enter 保存并关闭 快速信息弹窗
+	; ;;;用alt+回车调用 保存信息&关闭快捷任务输入窗口
+	; !enter:: 
+    ;     send,^{enter}
+    ;     ;;保存任务后，自动关闭窗口(现在在mlo内设置)
+    ;     ;send,!o
+    ;     ;;;;非常奇怪，执行完毕后会alt选中背景app的菜单，通过此操作清除菜单选定
+    ;     ;;;;send,{esc}
+    ; return
+
+    ;;;截获删除功能，将要删除的条目移动到"待删除(Deleted)"文件夹,这个文件夹的名称内必须有"Deleted"
+    ;;;如果要真正删除，就使用mlo里面的删除图标(删除图标的删除功能没有截获).
+    F9::
+        send,^m ;;打开移动对话框
+        Send,!f
+        send,{text}Deleted
+        ;;;因为文件io需要一段时间响应，因此这里加入延时。
+        msgbox,1,,2秒钟之后自动移入待删除文件夹,2
+        ;sleep,1000
+        send,{down}{down}{enter}
+    return
+
+    ~F4:: ;快速移动条目到目标文件夹
+        PressKeyManyTimes("press_1_f4_event","press_2_f4_event","press_2_f4_event",300)		
+		return
+
+		press_1_f4_event()
+		{
+			send,^m
+		}
+
+		press_2_f4_event()
+		{
+			Send,^m{enter}{enter}
+		}
+    return
 }
+#IfWinActive
+
+
+;;;7. 在 EditPlus 中
+#IfWinActive ahk_exe editplus.exe
+{
+    ;;修改ahk脚本之后，按F5重新载入脚本
+    ;;(现在一般都是在editplus、VSCode里面修改，所以加入对环境的判断)
+    $F5::
+        reload
+    return
+}
+#IfWinActive
+
+;;;8. 在 VSCode 中
+#IfWinActive ahk_exe Code.exe
+{
+    ;;;修改ahk脚本之后，按F5重新载入脚本
+    $F5::
+        reload
+    return
+
+    ;;;启动命令面板^+p 或者 ^+a
+    f4::Send,^+a
+}
+#IfWinActive
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;热字符串
+
+
 
 ;在开发环境phpstorm中的映射
 #IfWinActive ahk_exe phpstorm64.exe
@@ -2628,39 +2851,40 @@ return
 
 	;【3】注释符号的替换
 	:*:///:: ;;将///注释转换成/**注释
-	SendInput {text} /**
+	SendInput {text}/**
 	Send,{enter}
 	return	
 
 	;;;将win+f替换为文件全局格式化
 	#f::send,!+^l
-
-	;;;将双击esc设置为关闭tab
-	~esc::
-	PressKeyManyTimes("press_1_esc_event4jb","press_2_esc_event4jb","press_2_esc_event4jb",300)		
-	return
-
-	press_1_esc_event4jb()
-	{
-		send,{esc}
-	}
-
-	press_2_esc_event4jb()
-	{
-		Send,^{f4}
-	}
-
 }
 #IfWinActive
 
-;在开发环境phpstorm中的映射
+;在开发环境webstorm中的映射
 #IfWinActive ahk_exe webstorm64.exe
 {
 	;【1】注释符号的替换
 	:*:///:: ;;将///注释转换成/**注释
-	SendInput {text} /**
+	SendInput {text}/**
 	Send,{enter}
 	return	
+
+}
+#IfWinActive
+
+;在开发环境pycharm中的映射
+#IfWinActive ahk_exe pycharm64.exe
+{
+	;【1】注释符号的替换
+	:*:///:: ;;将///注释转换成/**注释
+	SendInput {text}"""
+	;;;因为pycharm默认为双引号补全另外一半，因此删除去另外3各双引号
+	Send,{del}{del}{del}
+	Send,{enter}
+	return	
+
+	;;;将win+f替换为文件全局格式化
+	#f::send,!+^l
 
 }
 #IfWinActive
@@ -2673,45 +2897,6 @@ return
 }
 #IfWinActive
 
-
-
-
-;;快速输入日期的热字符串
-;;2021-06-17
-:*:\\dd::
-	FormatTime, now_date, %A_Now%, yyyy-MM-dd ;格式化当前时间
-	Send, {text}%now_date% ;发送
-Return
-
-;;快速输入日期时间的热字符串
-;;2021-06-17 10:17:00
-:*:\\dt::
-	FormatTime, now_date, %A_Now%, yyyy-MM-dd HH:mm:ss ;格式化当前时间
-	Send, {text}%now_date% ;发送
-Return
-
-;;快速输入 段落分隔符
-:*:---:: ;8个长度差不多占比手机屏幕全长
-	Send,────────────────────────
-Return
-
-:*:===:: ;8个长度差不多占比手机屏幕全长
-	Send,════════════════════════
-Return
-
-:*:,,,:: ;8个长度差不多占比手机屏幕全长
-	Send,┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
-Return
-
-
-;【1】将 sss替换为 ${} 符号
-:*:sss::
-	SendInput, {text} ${}
-	send, {left}
-return
-
-
-:*:\\\\::{text}\\
 
 ;VK05::MsgBox,hi china
 
@@ -2737,7 +2922,16 @@ rbutton::
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;自定义函数部分
-
+PressTwice(pressEvent,timer=300){
+    If (A_PriorHotkey=A_ThisHotkey) and (A_TimeSincePriorHotkey<timer)
+    {
+        if (IsFunc(pressEvent))
+        {
+            %pressEvent%()
+        }
+    }
+}
+     	
 
 
 ;AHK多次按下某个键通用的处理函数。以下是通用的被调用部分。
@@ -2746,12 +2940,12 @@ rbutton::
 PressKeyManyTimes(press1Event,press2Event="",press3Event="",timer=500){
 	global gnPressCount += 1 
 
-        If gnPressCount = 1 
+    If gnPressCount = 1 
 	{
 		global _g_pc1=press1Event
 		global _g_pc2=press2Event
 		global _g_pc3=press3Event
-                SetTimer, ProcSubroutine, %timer%		
+        SetTimer, ProcSubroutine, %timer%		
 	}
 	return
 
@@ -2793,8 +2987,7 @@ PressKeyManyTimes(press1Event,press2Event="",press3Event="",timer=500){
 			}
 		}
 	 
-		; 在结束后，还需要将按键次数置为0，以方便下次使用
-	 
+		; 在结束后，还需要将按键次数置为0，以方便下次使用	 
 		gnPressCount := 0 
 		Return
 	 
@@ -2823,8 +3016,6 @@ MyPressKeyLong(key,longPressEvent){
 
 
 
-
-
 ;;获取给定数据的数据类型
 ;;TODO目前可以判定的数据类型有限，更多数据类型根据需要添加
 MyGetType(v) {
@@ -2833,6 +3024,34 @@ MyGetType(v) {
 	return "array"
     }
     return v="" || [v].GetCapacity(1) ? "string" : InStr(v,".") ? "float" : "int"
+}
+
+
+
+wrapContent(prefixer,postfixer){
+		clipboard=
+		sleep,200
+		send,^c
+		clipwait,2
+			
+
+		
+		;;需要判断剪切板内的数据是否以回车换行结尾。
+		_len := StrLen(clipboard)
+		_last := SubStr(clipboard, -1)
+		if  _last = `r`n
+		{
+			;Msgbox,回车换行
+			_newLen:= _len-2
+			clipboard:= SubStr(clipboard, 1,_newLen)
+			
+		}
+
+		
+		send,{text}%prefixer%
+		send,{text}%clipboard%
+		send,{text}%postfixer%
+		return
 }
 
 
@@ -2890,7 +3109,6 @@ MyUseClipReplace(oldValue="",newValue="",params*){
 }
 
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;
 ;;;;;功能验证与demo
@@ -2899,27 +3117,6 @@ MyUseClipReplace(oldValue="",newValue="",params*){
 ;$t::MyPressKeyLong("t","longPressEvent")
 longPressEvent(){
 	MsgBox,Hi Mr.Xie
-}
-
-
-
-
-;$space::PressKeyManyTimes("pressCount_1_space","pressCount_2_space","pressCount_3_space")
-;$ctrl::PressKeyManyTimes("pressCount_1_space","pressCount_2_space","pressCount_3_space")
-
-pressCount_1_space()
-{
-	Msgbox,"11111"
-}
-
-pressCount_2_space()
-{
-	Msgbox,"22222"
-}
-
-pressCount_3_space()
-{
-	Msgbox,"33333"
 }
 
 
@@ -2961,8 +3158,6 @@ return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;以下为研究学习
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 LButton & s::
 	myData:= 123
 	if (myData is number)	

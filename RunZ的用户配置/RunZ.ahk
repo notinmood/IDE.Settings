@@ -2157,12 +2157,6 @@ return
     send, {left}
 return
 
-;将 sss替换为 ${} 符号
-:*:sss::
-	SendInput, {text} ${}
-	send, {left}
-return
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 1.2. 局部热字母/热键(结束)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2865,6 +2859,68 @@ return
 }
 #IfWinActive
 
+#IfWinActive ahk_exe Obsidian.exe
+{
+    ;;; 使用 Git 作为同步工具的话，需要先安装 git 插件，然后在配置 Obsidian 内配置 快捷键，最后在 AHK 内映射（因为 Obsidian 不支持仅用 Fx功能键，他需要 Fx跟 Alt、Ctrl等配合）
+    ;;; 目前不使用 Git 作为同步工具，暂时屏蔽此快捷键（现在使用的 OneDrive 同步内容）
+    ; F11:: send,!{F11}
+    ; F12::
+    ;     PressKeyManyTimes("press_1_f12_Obsidian","press_2_f12_Obsidian","press_2_f12_Obsidian",300)		
+	; 	return
+
+	; 	press_1_f12_Obsidian()
+	; 	{
+	; 		send,!{F10}
+	; 	}
+
+	; 	press_2_f12_Obsidian()
+	; 	{
+	; 		send,!{F12}
+	; 	}
+    ; return
+
+
+    F4:: ;;; 定义用 # 开头的标题
+        
+        isEmptyLine := determineEmptyLine()
+
+        if(isEmptyLine){
+            send,{text}#
+            send,{space}
+        }else{
+            send,^c
+            firstChar := SubStr(clipboard, 1 ,1)
+
+            send,{home}
+            send,{text}#
+
+            if(firstChar!="#"){   
+                send,{space}
+            }    
+            send,{end}            
+        }		
+    return
+
+    F8:: ;;; 复选框
+        send,{text}- [ ]
+        send,{space}
+        return
+
+    F9:: ;;; 插入图片的模板
+        Send,{text} ![图片]()
+        Send,{left}
+        return
+
+
+    F12:: ;;; 插入代码块
+        send,{text}``````shell
+        send,`n`n
+        send,{text}
+        send,{up}
+    return
+}
+#IfWinActive
+
 
 ;VK05::MsgBox,hi china
 
@@ -2926,6 +2982,15 @@ return
 }
 #IfWinActive
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 在所有软件之后生效的全局热字母
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;将 sss替换为 ${} 符号
+:*:sss::
+	SendInput, {text} ${}
+	send, {left}
+return
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;自定义函数部分
@@ -3022,7 +3087,6 @@ MyPressKeyLong(key,longPressEvent){
 }
 
 
-
 ;;获取给定数据的数据类型
 ;;TODO目前可以判定的数据类型有限，更多数据类型根据需要添加
 MyGetType(v) {
@@ -3034,14 +3098,11 @@ MyGetType(v) {
 }
 
 
-
 wrapContent(prefixer,postfixer){
 		clipboard=
 		sleep,200
 		send,^c
 		clipwait,2
-			
-
 		
 		;;需要判断剪切板内的数据是否以回车换行结尾。
 		_len := StrLen(clipboard)
@@ -3050,10 +3111,8 @@ wrapContent(prefixer,postfixer){
 		{
 			;Msgbox,回车换行
 			_newLen:= _len-2
-			clipboard:= SubStr(clipboard, 1,_newLen)
-			
+			clipboard:= SubStr(clipboard, 1,_newLen)			
 		}
-
 		
 		send,{text}%prefixer%
 		send,{text}%clipboard%
@@ -3113,6 +3172,20 @@ MyUseClipReplace(oldValue="",newValue="",params*){
 	output:= clipboard
 	clipboard := clipboard_old
 	return %output%	
+}
+
+;;; 判断当前是否为空行
+determineEmptyLine(){
+    compareString := "iamxiedali20220225"
+    clipboard := compareString            
+
+    send,^c
+
+    if(clipboard == compareString){
+        return true
+    }else{
+        return false
+    }
 }
 
 

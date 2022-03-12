@@ -2074,41 +2074,7 @@ return
 ;;;第二段自定义部分开始
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; 1.1.  全局热字母 (更多全局热键，在文档末尾)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;快速输入日期的热字符串
-;;2021-06-17
-:*:\\dd::
-	FormatTime, now_date, %A_Now%, yyyy-MM-dd ;格式化当前时间
-	Send, {text}%now_date% ;发送
-Return
 
-;;快速输入日期时间的热字符串
-;;2021-06-17 10:17:00
-:*:\\dt::
-	FormatTime, now_date, %A_Now%, yyyy-MM-dd HH:mm:ss ;格式化当前时间
-	Send, {text}%now_date% ;发送
-Return
-
-;;快速输入 段落分隔符
-:*:---:: ;8个长度差不多占比手机屏幕全长
-	Send,────────────────────────
-Return
-
-:*:===:: ;8个长度差不多占比手机屏幕全长
-	Send,════════════════════════
-Return
-
-; :*:,,,:: ;8个长度差不多占比手机屏幕全长
-; 	Send,┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
-; Return
-
-:*:\\\\::{text}\\
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;; 1.1. 全局热字母 结束
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 1.2. 局部热字母/热键
@@ -2134,28 +2100,7 @@ Return
 ; :*:)::{text})
 ;;;:*:、::{text}/
 
-:*:aaa::
-:*:kkx::
-    send, {text}()
-    send, {left}
-return
 
-:*:bbb::
-:*:kkz::
-    send, {text}[]
-    send, {left}
-return
-
-:*:ccc::
-:*:kkd::
-    send, {text}{}
-    send, {left}
-return
-
-:*:yyy::
-    send, {text}""
-    send, {left}
-return
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 1.2. 局部热字母/热键(结束)
@@ -2195,9 +2140,14 @@ return
 PrintScreen::^!s
 
 ;;;有时候，一手握着鼠标，另一只手ctrl+c，ctrl+v，这时候想按下换行手还要移动很远，去按enter键很麻烦.索性把CapsLock键换成enter键。
-;;;把CapsLock和右侧alt转成End键,在写代码的时候更常用.
-$CapsLock::End
+;;;和右侧alt转成End键,在写代码的时候更常用.
+;$CapsLock::End
 $Ralt::End
+
+;;;把CapsLock 设置为 反向tab键（即 Shift+Tab）
+$CapsLock::
+    send,+{tab}
+return
 
 
 ;;关闭当前应用程序,改为alt+esc(暂时不使用这个功能)
@@ -2546,22 +2496,56 @@ return
 #IfWinActive ahk_exe ONENOTE.EXE
 {
 	F4:: ;标题重映射1
-		Send,^!1
-		Send,!hul{end}{up}{up}{up}{up}{left}{left}{left}{enter}
+		;;;
+        ;;; 先清除掉其他格式
+        Send,^+n
+
+        ; ;;; 启用MarkDown格式
+        ; send,^,
+        ; sleep,300
+
+        send,{home}
+        send,{text}#
+        send,{space}
+        send,{text}※
+        Send,^!1
+        send,{end}
+		;;;Send,!hul{end}{up}{up}{up}{up}{left}{left}{left}{enter}
+
+        ;;;退出 MarkDown 模式
+        send,^,
+
+        ;;; 顶格表示
+        send,{home}
+        send,+{tab}
+        send,+{tab}
+        send,+{tab}
 		return
 
 	F3:: ;标题重映射2		
 		;;使用下划线
 		Send,{home}
-		Send,{text}§
+        send,{text}##
+        send,{space}
+		Send,{text}__§
+        send,{end}
+        send,{text}__
 		;Send,{space}
-		Send,{home}{space}+{end}
+		;Send,{home}{right}{right}{right}+{end}
 		
 		Send,^!2
-		Send,^u
-		Send,^b
+		;Send,^u
+		;Send,^b
 		;;不使用前缀箭头
 		;Send,!hul{end}{up}{up}{left}{left}{left}{left}{enter}
+
+        send,^,
+
+        ;;; 顶格表示
+        send,{home}
+        send,+{tab}
+        send,+{tab}
+        send,+{tab}
 		return
 
     F2:: ;有序列表显示
@@ -2570,14 +2554,26 @@ return
 
     F1:: ;无序列表显示(用一个短横线开头)
     	Send,^+n
-		Send,!hul{end}{up}{left}{left}{left}{enter}
+		Send,!hul{right}{right}{right}{enter}
+        ;Send,!hul{end}{up}{left}{left}{left}{enter}
 		return
 
-    F5:: ;清除所有的格式,并保持行首没有缩进
-		Send,^+n
-		Send,+{tab}
+    $F5:: ;单击时候切换MD；双击的时候清除所有的格式,并保持行首没有缩进
+		PressKeyManyTimes("press_f5_1_onenote","press_f5_2_onenote","press_f5_2_onenote",500)	
+    return	
+
+    press_f5_1_onenote()
+    {
+        switchMD(0)
+    }
+    
+    press_f5_2_onenote(){
+        Send,^+n
         Send,+{tab}
-		return    
+        Send,+{tab}
+    }
+    return
+ 
 	
     F6:: ;;突出显示（加粗，加下划线)
         Send,^b
@@ -2585,8 +2581,75 @@ return
         return    	
     	
     F7:: ;背景突出
-        Send,!hfc{down}{enter}
-        Send,!hi{down}{right}{right}{right}{right}{enter}
+        PressKeyManyTimes("press_f7_1_onenote","press_f7_2_onenote","press_f7_2_onenote",500)	
+        return
+
+        press_f7_1_onenote()
+        {
+            ; clipboard = ; 清空剪贴板
+            ; send,^c
+            ; ClipWait,1
+            ;msgbox,%clipboard%
+            ;determineIsContentSelected()
+
+
+            ; isExistContent := determineIsContentSelected()
+            ; msgbox,%isExistContent%
+            ; if(isExistContent==true){
+            ;     msgbox,有
+            ; }else{
+            ;     msgbox,无
+            ; }
+
+
+            
+            clipboard = ; 清空剪贴板
+            switchMD()
+            send,^c
+            send,^x
+            sleep,400
+            send,{text}``
+            send,^v
+            send,{text}``
+            switchMD()
+
+
+
+
+            ; ;;;;TODO 这个地方判断需要完成 
+            ; ;;; TODO 用 wrapContent 完成此功能
+            ; clipboard = ; 清空剪贴板
+            ; send,^c
+            ; ClipWait,1
+            ; msgbox,%clipboard%
+        }
+
+        press_f7_2_onenote()
+        {
+            Send,!hfc{down}{enter}
+            Send,!hi{down}{right}{right}{right}{right}{enter}
+        }
+
+        ;;; 判断是否有内容被选中
+        determineIsContentSelected(){
+            clipboard_old := clipboard
+
+            compareString := "iamxiedali20220225"
+            clipboard := compareString            
+
+            send,^c
+            ;ClipWait,1
+            sleep,350
+
+            ;msgbox,%clipboard%
+            if(clipboard == compareString){
+                ;msgbox,false
+                return false
+            }else{
+                ;msgbox,true
+                return true
+            }
+        }
         return
     
     f8:: ;行首突出(红色行首)
@@ -2594,6 +2657,8 @@ return
         myfunc_em()
         ;Send, !hi
         Send, {home}{down}{down}{down}{down}{down}{down}{right}{right}{right}{right}{right}{enter}
+       
+        switchMD()
     return
 
     F9:: ;用表格格式化信息
@@ -2612,6 +2677,15 @@ return
 		Send,ah{down}{right}{home}{down}{right}{right}{right}{right}{right}{right}{enter}
 		return
     
+    F10::
+    ; RShift::
+    ; $CapsLock::    
+        switchMD()
+    return
+
+    ;;;
+    ;;; F10:: send,{F5}
+
     f11:: ;补充说明性质的文字
         myfunc_em()
         ; ;Send, !hfc
@@ -2620,6 +2694,8 @@ return
         Send, !hfs9{enter} 
         send, {esc}
         send, {end}
+
+        switchMD()
     return
 
     F12:: ;代码格式化(需要安装代码高亮插件NoteHighLight)
@@ -2653,6 +2729,19 @@ return
         Send, !hfc
         ;;Send, ^!h
     }
+    return
+
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    ;;; 在 MarkDown 格式和普通的 OneNote 格式间切换
+    ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+    switchMD(seconds=300){
+        if(seconds>0){
+            sleep,seconds
+        }
+        
+        Send,^,
+    }
+    return
 	
 
 	~esc:: ;调用历史面板
@@ -2668,7 +2757,7 @@ return
 		{
 			Send,!sea
 		}
-
+    return
 	
 	$^b:: ;以普通文本格式粘贴信息
 		;;1、调用窗口菜单方式
@@ -2801,7 +2890,7 @@ return
 	*/
 	;【1】将 sss替换为 $ 符号
 	:*:sss::
-	SendInput {text}$
+	    SendInput {text}$
 	return
 	
 
@@ -2948,28 +3037,12 @@ rbutton::
 ;;; 各软件专用的热键、热字母在前面；通用的热键、热字母在后面。
 ;;; 这样能保证从上到下的生效优先级。
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-#IfWinActive,ahk_group DevGroup_all
-{
-~LButton & t:: ;;是否在某开发工具内有效，进行测试。（按下鼠标左键和键盘t键）
-{
-	MsgBox,hello developer, this is a test 。
-}
-
-;【3】注释符号的替换
-:*:///:: ;;将///注释转换成/**注释
-    SendInput {text}/**
-    sleep,200
-    Send,{enter}
-return
-}
-
-
 #IfWinActive ahk_group DevGroup_jet
 {
     ;;;方法级的运行(在待运行的方法上右键，选择"运行...(Ctrl+Shift+F10)")，在ide内找不到重新分配快捷键。暂时在ahk内映射。
     f5::^+f10
 
+    ;;; F6单击：代码全部收缩到 1级；F6双击：代码全部展开到 2级
     f6::PressKeyManyTimes("press_1_f6_event","press_2_f6_event",300)
 
     press_1_f6_event(){
@@ -2982,15 +3055,297 @@ return
 }
 #IfWinActive
 
+#IfWinActive,ahk_group DevGroup_all
+{
+    ~LButton & t:: ;;是否在某开发工具内有效，进行测试。（按下鼠标左键和键盘t键）
+    {
+        MsgBox,hello developer, this is a test 。
+    }
+
+    ;【3】注释符号的替换
+    :*:///:: ;;将///注释转换成/**注释
+        SendInput {text}/**
+        sleep,200
+        Send,{enter}
+    return
+
+    ; ;;;; 先判断当前输入法的中英文状态，然后决定是输入中文还是英文的括号
+    ; :*:ccc::
+    ; :*:(::
+    ;     send, {text}()
+    ;     send, {left}
+    ; return
+
+    ; :*:yyy::
+    ; :*:"::
+    ;     send, ""
+    ;     send, {left}
+    ; return
+}
+#IfWinActive
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 1.1.  全局热字母 (更多全局热键，在文档末尾)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;快速输入日期的热字符串
+;;2021-06-17
+:*:\\dd::
+	FormatTime, now_date, %A_Now%, yyyy-MM-dd ;格式化当前时间
+	Send, {text}%now_date% ;发送
+Return
+
+;;快速输入日期时间的热字符串
+;;2021-06-17 10:17:00
+:*:\\dt::
+	FormatTime, now_date, %A_Now%, yyyy-MM-dd HH:mm:ss ;格式化当前时间
+	Send, {text}%now_date% ;发送
+Return
+
+;;快速输入 段落分隔符
+:*:---:: ;8个长度差不多占比手机屏幕全长
+	;;Send,────────────────────────
+
+    ;;; 使用 OneMark 后，英文字体统一被改成了 Calibra，
+    ;;; 占用宽度是原来 微软雅黑的一半了，因此要加长一些
+    Send,{text}─────────────────────────────────────
+Return
+
+:*:===:: ;8个长度差不多占比手机屏幕全长
+	Send,══════════════════════════
+Return
+
+; :*:,,,:: ;8个长度差不多占比手机屏幕全长
+; 	Send,┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+; Return
+
+:*:\\\\::{text}\\
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 在所有软件之后生效的全局热字母
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+:*:ccc::
+:*:(::
+    ime := getIME()
+    if(ime==1){
+        send,{text}（）
+    }else{
+        send,{text}()
+    }
+    
+    send, {left}
+return
+
+:*:yyy::
+:*:"::
+    ime := getIME()
+    if(ime==1){
+        send,{text}“”
+    }else{
+        send,{text}""
+    }
+    
+    send, {left}
+return
+
+:*:eee::
+:*:kkz::
+:*:[::
+    send, {text}[]
+    send, {left}
+return
+
+:*:bbb::
+    send, {text}{}
+    send, {left}
+return
+
+:*:iii::
+    send, {text}!
+return
+
+:*:aaa::
+    send, {text}@
+return
+
+:*:nnn::
+    send, {text}&
+return
 
 ;将 sss替换为 ${} 符号
 :*:sss::
 	SendInput, {text} ${}
 	send, {left}
 return
+
+:*:fff::
+:*:``::
+    send, {text}````
+    send, {left}
+return
+
+:*:ddd::
+    send, {text}=
+return
+
+:*:jjj::
+    send, {text}#
+return
+
+:*:uuu::
+    send, {text}_
+return
+
+:*:...::
+:*:.yy::
+:*:.nn::
+    send, {text}.
+return
+
+:*:.hh::
+    send, {text}。
+return
+
+:*:,,,::
+:*:,yy::
+:*:,nn::
+    send, {text},
+return
+
+:*:,hh::
+    send, {text}，
+return
+
+
+:*:a//::
+    send, {text}A
+return
+
+:*:b//::
+    send, {text}B
+return
+
+:*:c//::
+    send, {text}C
+return
+
+:*:d//::
+    send, {text}D
+return
+
+:*:e//::
+    send, {text}E
+return
+
+:*:f//::
+    send, {text}F
+return
+
+:*:g//::
+    send, {text}G
+return
+
+:*:h//::
+    send, {text}H
+return
+
+:*:i//::
+    send, {text}I
+return
+
+:*:j//::
+    send, {text}J
+return
+
+:*:k//::
+    send, {text}K
+return
+
+:*:l//::
+    send, {text}L
+return
+
+:*:m//::
+    send, {text}M
+return
+
+:*:n//::
+    send, {text}N
+return
+
+:*:o//::
+    send, {text}O
+return
+
+:*:p//::
+    send, {text}P
+return
+
+:*:q//::
+    send, {text}Q
+return
+
+:*:r//::
+    send, {text}R
+return
+
+:*:s//::
+    send, {text}S
+return
+
+:*:t//::
+    send, {text}T
+return
+
+:*:u//::
+    send, {text}U
+return
+
+:*:v//::
+    send, {text}V
+return
+
+:*:w//::
+    send, {text}W
+return
+
+:*:x//::
+    send, {text}X
+return
+
+:*:y//::
+    send, {text}Y
+return
+
+:*:z//::
+    send, {text}Z
+return
+
+; :*:`:`:`:::
+; :*:`:yy::
+; :*:`:nn::
+;     send, {text}:
+; return
+
+; :*:`:hh::
+;     send, {text}：
+; return
+
+
+;;;快速插入 MarkDown 的超链接
+:*:mmh::
+    send, {text}[信息来源]()
+    send, {left}
+return
+
+;;;快速插入 MarkDown 的图片
+:*:mmi::
+    send, {text}![图片]()
+    send, {left}
+return
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 1.1. 全局热字母 结束
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;自定义函数部分
@@ -3061,10 +3416,9 @@ PressKeyManyTimes(press1Event,press2Event="",press3Event="",timer=500){
 	 
 		; 在结束后，还需要将按键次数置为0，以方便下次使用	 
 		gnPressCount := 0 
-		Return
-	 
+		Return	 
 	}
-return
+    return
 }
 
 
@@ -3186,6 +3540,25 @@ determineEmptyLine(){
     }else{
         return false
     }
+}
+
+
+;-----------------------------------------------------------
+; “获得 Input Method Editors 的状态”(目前对搜狗输入法有效，其他未验证)
+;   -- 如果返回1，表示搜狗输入法中文状态
+;   -- 如果返回0，表示搜狗输入法英文状态
+;-----------------------------------------------------------
+getIME(WinTitle="")
+{
+    ifEqual WinTitle,,  SetEnv,WinTitle,A
+    WinGet,hWnd,ID,%WinTitle%
+    DefaultIMEWnd := DllCall("imm32\ImmGetDefaultIMEWnd", Uint,hWnd, Uint)
+ 
+    DetectSave := A_DetectHiddenWindows
+    DetectHiddenWindows,ON
+    SendMessage 0x283, 0x005,0,,ahk_id %DefaultIMEWnd%
+    DetectHiddenWindows,%DetectSave%
+    Return ErrorLevel
 }
 
 

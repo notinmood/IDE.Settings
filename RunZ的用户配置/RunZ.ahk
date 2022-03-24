@@ -44,7 +44,6 @@ GroupAdd,TabGroup_all ,ahk_exe DocBox.exe
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;第一段自定义部分结束
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -2142,12 +2141,24 @@ PrintScreen::^!s
 ;;;有时候，一手握着鼠标，另一只手ctrl+c，ctrl+v，这时候想按下换行手还要移动很远，去按enter键很麻烦.索性把CapsLock键换成enter键。
 ;;;和右侧alt转成End键,在写代码的时候更常用.
 ;$CapsLock::End
-$Ralt::End
+$RAlt::
+    PressKeyManyTimes("press_1_ralt_event","press_2_ralt_event","",300)		
 
-;;;把CapsLock 设置为 反向tab键（即 Shift+Tab）
-$CapsLock::
-    send,+{tab}
+    press_1_ralt_event()
+	{		
+        Send, {end}
+	}
+
+    press_2_ralt_event()
+	{		
+        Send, {home}
+	}
 return
+
+; ;;;把CapsLock 设置为 反向tab键（即 Shift+Tab）
+; $CapsLock::
+;     send,+{tab}
+; return
 
 
 ;;关闭当前应用程序,改为alt+esc(暂时不使用这个功能)
@@ -2524,7 +2535,9 @@ return
 
 	F3:: ;标题重映射2		
 		;;使用下划线
-		Send,{home}
+		Send,^!2
+        
+        Send,{home}
         send,{text}##
         send,{space}
 		Send,{text}__§
@@ -2533,7 +2546,7 @@ return
 		;Send,{space}
 		;Send,{home}{right}{right}{right}+{end}
 		
-		Send,^!2
+		
 		;Send,^u
 		;Send,^b
 		;;不使用前缀箭头
@@ -3123,6 +3136,10 @@ Return
 ;;; 在所有软件之后生效的全局热字母
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 尚未使用的 3连字符 k g h l m o p q r t v w z 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 :*:ccc::
 :*:(::
     ime := getIME()
@@ -3195,13 +3212,17 @@ return
     send, {text}_
 return
 
+:*:xxx::
+    send, {text}*
+return
+
 :*:...::
 :*:.yy::
 :*:.nn::
     send, {text}.
 return
 
-:*:.hh::
+:*:.;;::
     send, {text}。
 return
 
@@ -3211,112 +3232,112 @@ return
     send, {text},
 return
 
-:*:,hh::
+:*:,;;::
     send, {text}，
 return
 
 
-:*:a//::
+:*:a;;::
     send, {text}A
 return
 
-:*:b//::
+:*:b;;::
     send, {text}B
 return
 
-:*:c//::
+:*:c;;::
     send, {text}C
 return
 
-:*:d//::
+:*:d;;::
     send, {text}D
 return
 
-:*:e//::
+:*:e;;::
     send, {text}E
 return
 
-:*:f//::
+:*:f;;::
     send, {text}F
 return
 
-:*:g//::
+:*:g;;::
     send, {text}G
 return
 
-:*:h//::
+:*:h;;::
     send, {text}H
 return
 
-:*:i//::
+:*:i;;::
     send, {text}I
 return
 
-:*:j//::
+:*:j;;::
     send, {text}J
 return
 
-:*:k//::
+:*:k;;::
     send, {text}K
 return
 
-:*:l//::
+:*:l;;::
     send, {text}L
 return
 
-:*:m//::
+:*:m;;::
     send, {text}M
 return
 
-:*:n//::
+:*:n;;::
     send, {text}N
 return
 
-:*:o//::
+:*:o;;::
     send, {text}O
 return
 
-:*:p//::
+:*:p;;::
     send, {text}P
 return
 
-:*:q//::
+:*:q;;::
     send, {text}Q
 return
 
-:*:r//::
+:*:r;;::
     send, {text}R
 return
 
-:*:s//::
+:*:s;;::
     send, {text}S
 return
 
-:*:t//::
+:*:t;;::
     send, {text}T
 return
 
-:*:u//::
+:*:u;;::
     send, {text}U
 return
 
-:*:v//::
+:*:v;;::
     send, {text}V
 return
 
-:*:w//::
+:*:w;;::
     send, {text}W
 return
 
-:*:x//::
+:*:x;;::
     send, {text}X
 return
 
-:*:y//::
+:*:y;;::
     send, {text}Y
 return
 
-:*:z//::
+:*:z;;::
     send, {text}Z
 return
 

@@ -2092,7 +2092,6 @@ return
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 1.2. 局部热字母/热键(结束)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-#IfWinActivet
 
 ;;;将esc的单击默认原来的操作；双击设置为关闭tab; 三击设置为应用程序。
 ~esc:: 
@@ -2139,18 +2138,17 @@ press_2_prtsc_event(){
 ;;;有时候，一手握着鼠标，另一只手ctrl+c，ctrl+v，这时候想按下换行手还要移动很远，去按enter键很麻烦.索性把CapsLock键换成enter键。
 ;;;和右侧alt转成End键,在写代码的时候更常用.
 ;$CapsLock::End
-$RAlt::
-    PressKeyManyTimes("press_1_ralt_event","press_2_ralt_event","",300)		
+$RAlt:: PressKeyManyTimes("press_1_ralt_event","press_2_ralt_event","",400)		
 
-    press_1_ralt_event()
-    {		
-        Send, {end}
-    }
+press_1_ralt_event()
+{		
+    Send, {end}
+}
 
-    press_2_ralt_event()
-    {		
-        Send, {home}
-    }
+press_2_ralt_event()
+{		
+    Send, {home}
+}
 return
 
 ; ;;;把CapsLock 设置为 反向tab键（即 Shift+Tab）
@@ -2187,258 +2185,260 @@ lalt_event_kp2(){
     output := MyUseClipReplace(["。","."],["，",","],["；",";"],["（","("],["）",")"])
         send,{text}%output%
     }
+Return
 
-    lalt_event_kp3(){
-        send,{end}
-        send,+{home} 
-        output := MyUseClipReplace(["。","."],["，",","],["；",";"],["（","("],["）",")"])
+lalt_event_kp3(){
+    send,{end}
+    send,+{home} 
+    output := MyUseClipReplace(["。","."],["，",","],["；",";"],["（","("],["）",")"])
+        send,{text}%output%
+    }
+
+    ralt_event_kp1()
+    {
+        send,{ralt}
+    }
+
+    ralt_event_kp2(){	
+        send,+{left}
+        output := MyUseClipReplace([".","。"],[",","，"],[";","；"],["(","（"],[")","）"])
             send,{text}%output%
         }
 
-        ralt_event_kp1()
-        {
-            send,{ralt}
-        }
-
-        ralt_event_kp2(){	
-            send,+{left}
+        ralt_event_kp3(){
+            send,{end}
+            send,+{home} 
             output := MyUseClipReplace([".","。"],[",","，"],[";","；"],["(","（"],[")","）"])
                 send,{text}%output%
             }
 
-            ralt_event_kp3(){
-                send,{end}
-                send,+{home} 
-                output := MyUseClipReplace([".","。"],[",","，"],[";","；"],["(","（"],[")","）"])
-                    send,{text}%output%
-                }
-
-                ;;这个功能暂时通过powertoy实现。否则停止下列代码的注释
-                ;;由于Ctrl+s 操作起来不方便，将Alt+s映射到Ctrl+s
-                ;$!s:: ;保存
-                ;	Send, ^s
-                ;	sleep,400
-                ;	send, {esc}
-                ;return
-
-                ;;格式刷(奇数次复制格式，偶数次的时候粘贴格式。无论是复制格式还是粘贴格式，都需要先选中目标文本)
-                $#f::
-                    global wfPressCount += 1 
-
-                    if(mod(wfPressCount,2)=0){
-                        ;msgbox,偶数
-                        Send,^+v
-                    }else{
-                        ;msgbox,奇数
-                        Send,^+c
-                    }
-                return
-
-                ;;;以下方向键重定义，使用space方案代替alt方案。暂时注释。
-                ;;;以下内容为方向键重定义
-                ;$!i::Send {Up} 
-                ;$!k::Send {Down}
-                ;$!j::Send {Left}
-                ;$!l::Send {Right}
-                ;$!h::Send {Home}
-                ;$!;::Send {End}
-
-                ;;;重置Space按键  ***  space
-                space::Send {space}
-
-                ^space::Send ^{space}
-                #space::Send #{space}
-                ^#space::Send ^#{space}
-                !space::Send !{space}
-                ^!space::Send ^!{space}
-
-                ;  *** space + Num
-                space & 1::Send {space}
-                space & 2::Send {space}{space}
-                space & 3::Send {space}{space}{space}
-                space & 4::Send {space}{space}{space}{space}
-                space & 5::Send {space}{space}{space}{space}{space}
-                space & 6::Send {space}{space}{space}{space}{space}{space}
-                space & 7::Send {space}{space}{space}{space}{space}{space}{space}
-                space & 8::Send {space}{space}{space}{space}{space}{space}{space}{space}
-                space & 9::Send {space}{space}{space}{space}{space}{space}{space}{space}{space}
-
-                ;  *** space + [] (windows virual desktop switcher)
-                space & [::Send ^#{left}
-                space & ]::Send ^#{right}
-
-                ;  *** space + XX
-                #if GetKeyState("space", "P")
-                    f & i:: Send +{up}
-                f & j:: Send +{left} 
-                f & k:: Send +{down}
-                f & l:: Send +{right}
-                d & i:: Send ^{up}
-                d & j:: Send ^{left}
-                d & k:: Send ^{down}
-                d & l:: Send ^{right}
-                ;g & i:: Send ^+{up} 
-                g & j:: Send ^+{left}
-                ;g & k:: Send ^+{down}
-                g & l:: Send ^+{right}
-
-                i:: Send {up}
-                j:: Send {left}
-                k:: Send {down}
-                l:: Send {right}
-                h:: Send {home}
-                n:: Send {end}
-                ,:: Send {Pgup}
-                .:: Send {Pgdn}
-
-                b::Send,{backspace}
-                d::Send,{del}
-
-                c:: Send ^c
-                x:: Send ^x
-                v:: Send ^v
-                z:: Send ^z
-
-                return
-                ;;;重置Space按键结束  ***  space
-
-                ;输入法搜狗，切换方式
-                ;右Shift 在各种输入法之间切换
-                ~RShift::Send, #{Space}
-                ;========================
-                ;左Shift 在sogou输入法内，进行中英文的切换（在搜狗输入法内设置）
-                ~LShift::
-                    switch_sg_ime(1)
-                    send,+	 
-                return
-
-                ;;Ctrl + Shift + C锁定搜狗中文输入法
-                ;;Ctrl + Shift + E锁定英文输入法
-                ^+c::
-                    switch_sg_ime(1)
-                return 
-
-                ^+e::
-                    switch_sg_ime(0)
-                return
-
-                switch_sg_ime(ime := "A")
-                {
-                    SetCapsLockState , AlwaysOff
-                    if (ime = 1)
-                    {
-                        DllCall("SendMessage", UInt, WinActive("A"), UInt, 80, UInt, 1, UInt, DllCall("LoadKeyboardLayout", Str,"00000804", UInt, 1))
-
-                    }
-                    else if (ime = 0)
-                    {
-                        DllCall("SendMessage", UInt, WinActive("A"), UInt, 80, UInt, 1, UInt, DllCall("LoadKeyboardLayout", Str,, UInt, 1))
-                    }
-                    else if (ime = "A")
-                    {
-                        Send, #{Space}
-                    }
-                }
-                Return
-
-                ;启动windows 的邮件功能
-                PrintScreen & m::
-                #m::
-                    #!^m::send ^!m
-
-                    ; PrintScreen & s::
-                    ; #!^s::run "D:\tools\office\Snipaste-2.5.6-Beta-x64\Snipaste.exe"
-                PrintScreen & e::
-                    #!^e::run "C:\Program Files\Everything\Everything.exe"
-
-                PrintScreen & n::
-                    #!^n::run C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
-                PrintScreen & t::
-                    #^!t::run taskmgr.exe
-                    ;;;面板（面霸8）
-                PrintScreen & 8::
-                #^8::
-                    #^!8::run control.exe
-                    ;;;命令（命0）
-                PrintScreen & c::
-                    #!^0::run cmd.exe
-                PrintScreen & i::
-                    #!^i::run C:\windows\system32\inetsrv\iis.msc
-                #^b::
-                    _result:=UserDisplay()
-                    MsgBox, You entered %_result%
-                return
-
-                UserDisplay(){
-                    InputBox, UserInput, Phone Number, Please enter a phone number., , 640, 480
-
-                    if (ErrorLevel)
-                        MsgBox, CANCEL was pressed.
-                    else
-                        ;MsgBox, You entered "%UserInput%"!
-                return %UserInput%
-            }
-
-            ;;;;;;;;;;;;;删除一整行
-            $!d:: ;alt+d
-                Send, {Home} ;输出回车
-                Send, +{End} ;输入shitf键+end键
-                Send, {delete} ;输入delete键
-            return 
-            ;;;;;;;;;;;;;复制一整行
-            $!c::
-                Send, {home}
-                Send, +{end}
-                Send, ^c ;输出ctrl+c,复制一整行
-            return
-            ;;;;;;;;;;;;;另起一行粘贴内容 
-            $!v:: 
-                Send, {end}
-                Send, {enter}
-                Send, {text}%clipboard% ;将剪贴板的内容输出 
-            return 
-            ;;;;;;;;;;;;;分隔符 (暂时使用热文本替换的方式,热文本为 ---- (4个-符号))
-            ;~!-:: ;请在中文输入法下,8个长度差不多占比手机屏幕全长
-            ;	Send, +-+-+-+-+-+-+-+-
+            ;;这个功能暂时通过powertoy实现。否则停止下列代码的注释
+            ;;由于Ctrl+s 操作起来不方便，将Alt+s映射到Ctrl+s
+            ;$!s:: ;保存
+            ;	Send, ^s
+            ;	sleep,400
+            ;	send, {esc}
             ;return
 
-            $F10:: ;;在 msedge 中设置快捷键 ctrl+0 (调用沙拉词典)
-                Send,^0
+            ;;格式刷(奇数次复制格式，偶数次的时候粘贴格式。无论是复制格式还是粘贴格式，都需要先选中目标文本)
+            $#f::
+                global wfPressCount += 1 
+
+                if(mod(wfPressCount,2)=0){
+                    ;msgbox,偶数
+                    Send,^+v
+                }else{
+                    ;msgbox,奇数
+                    Send,^+c
+                }
             return
 
-            ;;用Alt+↑ 、Alt+↓ 映射查找结果集的上一条、下一条
-            ;;jetBrains系列软件在Ctrl+F搜索模式下，不用重新映射，直接使用↑，↓就可以了。
-            ;;1、在edge浏览器中
-            #IfWinActive ahk_exe msedge.exe
+            ;;;以下方向键重定义，使用space方案代替alt方案。暂时注释。
+            ;;;以下内容为方向键重定义
+            ;$!i::Send {Up} 
+            ;$!k::Send {Down}
+            ;$!j::Send {Left}
+            ;$!l::Send {Right}
+            ;$!h::Send {Home}
+            ;$!;::Send {End}
+
+            ;;;重置Space按键  ***  space
+            space::Send {space}
+
+            ^space::Send ^{space}
+            #space::Send #{space}
+            ^#space::Send ^#{space}
+            !space::Send !{space}
+            ^!space::Send ^!{space}
+
+            ;  *** space + Num
+            space & 1::Send {space}
+            space & 2::Send {space}{space}
+            space & 3::Send {space}{space}{space}
+            space & 4::Send {space}{space}{space}{space}
+            space & 5::Send {space}{space}{space}{space}{space}
+            space & 6::Send {space}{space}{space}{space}{space}{space}
+            space & 7::Send {space}{space}{space}{space}{space}{space}{space}
+            space & 8::Send {space}{space}{space}{space}{space}{space}{space}{space}
+            space & 9::Send {space}{space}{space}{space}{space}{space}{space}{space}{space}
+
+            ;  *** space + [] (windows virual desktop switcher)
+            space & [::Send ^#{left}
+            space & ]::Send ^#{right}
+
+            ;  *** space + XX
+            #if GetKeyState("space", "P")
+                f & i:: Send +{up}
+            f & j:: Send +{left} 
+            f & k:: Send +{down}
+            f & l:: Send +{right}
+            d & i:: Send ^{up}
+            d & j:: Send ^{left}
+            d & k:: Send ^{down}
+            d & l:: Send ^{right}
+            ;g & i:: Send ^+{up} 
+            g & j:: Send ^+{left}
+            ;g & k:: Send ^+{down}
+            g & l:: Send ^+{right}
+
+            i:: Send {up}
+            j:: Send {left}
+            k:: Send {down}
+            l:: Send {right}
+            h:: Send {home}
+            n:: Send {end}
+            ,:: Send {Pgup}
+            .:: Send {Pgdn}
+
+            b::Send,{backspace}
+            d::Send,{del}
+
+            c:: Send ^c
+            x:: Send ^x
+            v:: Send ^v
+            z:: Send ^z
+
+            return
+            ;;;重置Space按键结束  ***  space
+
+            ;输入法搜狗，切换方式
+            ;右Shift 在各种输入法之间切换
+            ~RShift::Send, #{Space}
+            ;========================
+            ;左Shift 在sogou输入法内，进行中英文的切换（在搜狗输入法内设置）
+            ~LShift::
+                switch_sg_ime(1)
+                send,+	 
+            return
+
+            ;;Ctrl + Shift + C锁定搜狗中文输入法
+            ;;Ctrl + Shift + E锁定英文输入法
+            ^+c::
+                switch_sg_ime(1)
+            return 
+
+            ^+e::
+                switch_sg_ime(0)
+            return
+
+            switch_sg_ime(ime := "A")
+            {
+                SetCapsLockState , AlwaysOff
+                if (ime = 1)
                 {
-                    ;【1】将 Alt+↑ 映射查找结果集的上一条
-                    !Up::send,^+g
+                    DllCall("SendMessage", UInt, WinActive("A"), UInt, 80, UInt, 1, UInt, DllCall("LoadKeyboardLayout", Str,"00000804", UInt, 1))
 
-                    ;【2】将 Alt+↓ 映射查找结果集的下一条h
-                    !down::send,^g
-
-                    ;;;将F6设置为新建tab
-                    F6::Send,^t
-                    ;;;将F4设置为关闭tab
-                    ;F4::Send,^w
-
-                    ;;将F8设置为简阅的快捷键(需要提前设置简阅的快捷键为ctrl+r)
-                    F8::
-                        send, F4
-                        send, ^c
-                        send, {read://}
-                        send, ^v
-                    return
-
-                    ;;;双击左键关闭当前tab
-                    ;LButton::
-                    ;If (A_PriorHotkey=A_ThisHotkey) and (A_TimeSincePriorHotkey<300)
-                    ;{
-                    ;	;send, ^w
-                    ;	MouseClick,Middle
-                    ;}
-                    return
                 }
+                else if (ime = 0)
+                {
+                    DllCall("SendMessage", UInt, WinActive("A"), UInt, 80, UInt, 1, UInt, DllCall("LoadKeyboardLayout", Str,, UInt, 1))
+                }
+                else if (ime = "A")
+                {
+                    Send, #{Space}
+                }
+            }
+            Return
+
+            ;启动windows 的邮件功能
+            PrintScreen & m::
+            #m::
+                #!^m::send ^!m
+
+                ; PrintScreen & s::
+                ; #!^s::run "D:\tools\office\Snipaste-2.5.6-Beta-x64\Snipaste.exe"
+            PrintScreen & e::
+                #!^e::run "C:\Program Files\Everything\Everything.exe"
+
+            PrintScreen & n::
+                #!^n::run C:\Program Files\Microsoft Office\root\Office16\ONENOTE.EXE
+            PrintScreen & t::
+                #^!t::run taskmgr.exe
+                ;;;面板（面霸8）
+            PrintScreen & 8::
+            #^8::
+                #^!8::run control.exe
+                ;;;命令（命0）
+            PrintScreen & c::
+                #!^0::run cmd.exe
+            PrintScreen & i::
+                #!^i::run C:\windows\system32\inetsrv\iis.msc
+            #^b::
+                _result:=UserDisplay()
+                MsgBox, You entered %_result%
+            return
+
+            UserDisplay(){
+                InputBox, UserInput, Phone Number, Please enter a phone number., , 640, 480
+
+                if (ErrorLevel)
+                    MsgBox, CANCEL was pressed.
+                else
+                    ;MsgBox, You entered "%UserInput%"!
+            return %UserInput%
+        }
+
+        ;;;;;;;;;;;;;删除一整行
+        $!d:: ;alt+d
+            Send, {Home} ;输出回车
+            Send, +{End} ;输入shitf键+end键
+            Send, {delete} ;输入delete键
+        return 
+        ;;;;;;;;;;;;;复制一整行
+        $!c::
+            Send, {home}
+            Send, +{end}
+            Send, ^c ;输出ctrl+c,复制一整行
+        return
+        ;;;;;;;;;;;;;另起一行粘贴内容 
+        $!v:: 
+            Send, {end}
+            Send, {enter}
+            Send, {text}%clipboard% ;将剪贴板的内容输出 
+        return 
+        ;;;;;;;;;;;;;分隔符 (暂时使用热文本替换的方式,热文本为 ---- (4个-符号))
+        ;~!-:: ;请在中文输入法下,8个长度差不多占比手机屏幕全长
+        ;	Send, +-+-+-+-+-+-+-+-
+        ;return
+
+        $F10:: ;;在 msedge 中设置快捷键 ctrl+0 (调用沙拉词典)
+            Send,^0
+        return
+
+        ;;用Alt+↑ 、Alt+↓ 映射查找结果集的上一条、下一条
+        ;;jetBrains系列软件在Ctrl+F搜索模式下，不用重新映射，直接使用↑，↓就可以了。
+        ;;1、在edge浏览器中
+        #IfWinActive ahk_exe msedge.exe
+            {
+                ;【1】将 Alt+↑ 映射查找结果集的上一条
+                !Up::send,^+g
+
+                ;【2】将 Alt+↓ 映射查找结果集的下一条h
+                !down::send,^g
+
+                ;;;将F6设置为新建tab
+                F6::Send,^t
+                ;;;将F4设置为关闭tab
+                ;F4::Send,^w
+
+                ;;以下本条目，不再使用。现在直接使用简阅直接的快捷键 aa
+                ;;将F8设置为简阅的快捷键(需要提前设置简阅的快捷键为ctrl+r)
+                ; F8::
+                ;     send, F4
+                ;     send, ^c
+                ;     send, {read://}
+                ;     send, ^v
+                ; return
+
+                ;;;双击左键关闭当前tab
+                ;LButton::
+                ;If (A_PriorHotkey=A_ThisHotkey) and (A_TimeSincePriorHotkey<300)
+                ;{
+                ;	;send, ^w
+                ;	MouseClick,Middle
+                ;}
+                return
+            }
 #IfWinActive
 
 ;;2、在Editplus中
@@ -2631,12 +2631,13 @@ lalt_event_kp2(){
         }
         return
 
-        f8:: ;行首突出(红色行首)
+        F8:: ;行首突出(红色行首)
         space & r:: 
             myfunc_em()
             ;Send, !hi
             Send, {home}{down}{down}{down}{down}{down}{down}{right}{right}{right}{right}{right}{enter}
-            switchMD()
+            switchMD(50)
+            ;switchMD()
         return
 
         F9:: ;用表格格式化信息
@@ -2873,9 +2874,7 @@ lalt_event_kp2(){
 ;在开发环境phpstorm中的映射
 #IfWinActive ahk_exe phpstorm64.exe
     {
-	/* 
-	将这段 全局中是sss替换${}
-	PHP中是 sss替代 $
+	/** 将这段 全局中是sss替换${}； PHP中是 sss替代 $ 
         */
         ;【1】将 sss替换为 $ 符号
         :*:sss::
@@ -2988,86 +2987,64 @@ lalt_event_kp2(){
 }
 #IfWinActive
 
-;VK05::MsgBox,hi china
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; 各软件专用的热键、热字母在前面；通用的热键、热字母在后面。
+;;; 这样能保证从上到下的生效优先级。
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+#IfWinActive ahk_group DevGroup_jet
+{
+    ; ;;;方法级的运行(在待运行的方法上右键，选择"运行...(Ctrl+Shift+F10)")，在ide内找不到重新分配快捷键。暂时在ahk内映射。
+    ; f5::^+f10
 
-;;;;鼠标手势研究
-/*
-rbutton::     
-  mousegetpos xpos1,ypos1
-  settimer,gtrack,1               
-  return
-  rbutton up::
-  settimer,gtrack,off           
-  msgbox,,,%gtrack%,1
-  gtrack=
-  return
-  gtrack:
-  mousegetpos xpos2,ypos2
-  track:=(abs(ypos1-ypos2)>=abs(xpos1-xpos2)) ? (ypos1>ypos2 ? "u" : "d") : (xpos1>xpos2 ? "l" : "r")
-  if (track<>SubStr(gtrack, 0, 1)) and (abs(ypos1-ypos2)>4 or abs(xpos1-xpos2)>4)
-     gtrack.=track
-  xpos1:=xpos2,ypos1:=ypos2
-  return
-        */
+    ;;;; f4:单击切换项目树；双击切换“运行”窗口。
+    f4::PressKeyManyTimes("press_1_f4_jet","press_2_f4_jet",500)
 
-        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-        ;;; 各软件专用的热键、热字母在前面；通用的热键、热字母在后面。
-        ;;; 这样能保证从上到下的生效优先级。
-        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-        #IfWinActive ahk_group DevGroup_jet
-            {
-                ; ;;;方法级的运行(在待运行的方法上右键，选择"运行...(Ctrl+Shift+F10)")，在ide内找不到重新分配快捷键。暂时在ahk内映射。
-                ; f5::^+f10
+    press_1_f4_jet(){
+        send,{f4}
+    }
 
-                ;;;; f4:单击切换项目树；双击切换“运行”窗口。
-                f4::PressKeyManyTimes("press_1_f4_jet","press_2_f4_jet",500)
+    press_2_f4_jet(){
+        ;;; 除主代码窗口外，关闭全部辅助窗口。
+        ;send,^+{f12}
+        ;;; 
+        send,!4
+    }
 
-                press_1_f4_jet(){
-                    send,{f4}
-                }
+    ;;;; F5:单击运行；双击保存
+    $f5::PressKeyManyTimes("press_1_f5_jet","press_2_f5_jet",500)
 
-                press_2_f4_jet(){
-                    ;;; 除主代码窗口外，关闭全部辅助窗口。
-                    ;send,^+{f12}
-                    ;;; 
-                    send,!4
-                }
+    press_1_f5_jet(){
+        send,^+{f10} ;;(在待运行的方法上右键，选择"运行...(Ctrl+Shift+F10)")
+    }
 
-                ;;;; F5:单击运行；双击保存
-                f5::PressKeyManyTimes("press_1_f5_jet","press_2_f5_jet",500)
+    press_2_f5_jet(){
+        send,^s
+    }
 
-                press_1_f5_jet(){
-                    send,^+f10 ;;(在待运行的方法上右键，选择"运行...(Ctrl+Shift+F10)")
-                }
+    ;;; F6单击：代码全部收缩到 1级；F6双击：代码全部展开到 2级
+    f6::PressKeyManyTimes("press_1_f6_event","press_2_f6_event",300)
 
-                press_2_f5_jet(){
-                    send,^s
-                }
+    press_1_f6_event(){
+        send,^+{NumpadMult}{1}
+    }
 
-                ;;; F6单击：代码全部收缩到 1级；F6双击：代码全部展开到 2级
-                f6::PressKeyManyTimes("press_1_f6_event","press_2_f6_event",300)
+    press_2_f6_event(){
+        send,^+{-}
+    }
 
-                press_1_f6_event(){
-                    send,^+{NumpadMult}{1}
-                }
-
-                press_2_f6_event(){
-                    send,^+{-}
-                }
-
-                ;;;将win+f替换为文件全局格式化
-                #f::send,!+^l
-            }
+    ;;;将win+f替换为文件全局格式化
+    #f::send,!+^l
+}
 #IfWinActive
 
-#IfWinActive,ahk_group DevGroup_all
+#IfWinActive ahk_group DevGroup_all
+{
+    ~LButton & t:: ;;是否在某开发工具内有效，进行测试。（按下鼠标左键和键盘t键）
     {
-        ~LButton & t:: ;;是否在某开发工具内有效，进行测试。（按下鼠标左键和键盘t键）
-            {
-                MsgBox,hello developer, this is a test 。
-            }
+        MsgBox,hello developer, this is a test 。
+    }
 
-            ;【3】注释符号的替换
+    ;【3】注释符号的替换
     :*:///:: ;;将///注释转换成/**注释
         SendInput {text}/**
         sleep,200
@@ -3088,6 +3065,7 @@ rbutton::
     ; return
 }
 #IfWinActive
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; 1.1.  全局热字母 (更多全局热键，在文档末尾)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -3144,8 +3122,8 @@ Return
     send, {left}
 return
 
+;;:*:"::
 :*:yyy::
-:*:"::
     ime := getIME()
     if(ime==1){
         send,{text}“”
@@ -3383,7 +3361,6 @@ PressTwice(pressEvent,timer=300){
         }
     }
 }
-     	
 
 ;AHK多次按下某个键通用的处理函数。以下是通用的被调用部分。
 ;其中press1Event,press2Event,press3Event是处理点击、双击、三击的子函数
@@ -3473,25 +3450,25 @@ MyGetType(v) {
 }
 
 wrapContent(prefixer,postfixer){
-		clipboard=
-		sleep,200
-		send,^c
-		clipwait,2
-		
-		;;需要判断剪切板内的数据是否以回车换行结尾。
-		_len := StrLen(clipboard)
-		_last := SubStr(clipboard, -1)
-		if  _last = `r`n
-		{
-			;Msgbox,回车换行
-			_newLen:= _len-2
-			clipboard:= SubStr(clipboard, 1,_newLen)			
-		}
-		
-		send,{text}%prefixer%
-		send,{text}%clipboard%
-		send,{text}%postfixer%
-		return
+    clipboard=
+    sleep,200
+    send,^c
+    clipwait,2
+    
+    ;;需要判断剪切板内的数据是否以回车换行结尾。
+    _len := StrLen(clipboard)
+    _last := SubStr(clipboard, -1)
+    if  _last = `r`n
+    {
+        ;Msgbox,回车换行
+        _newLen:= _len-2
+        clipboard:= SubStr(clipboard, 1,_newLen)			
+    }
+    
+    send,{text}%prefixer%
+    send,{text}%clipboard%
+    send,{text}%postfixer%
+    return
 }
 
 ;;通过将选定的字符串保存进入剪贴板，
@@ -3503,7 +3480,6 @@ wrapContent(prefixer,postfixer){
 ;;如果要替换多个子字符串,那么每一个oldValue,newValue构成一个数组[oldValue,newValue],传递多组就可以了
 ;; （替换多组的时候，可以忽略前面两个参数。）
 MyUseClipReplace(oldValue="",newValue="",params*){
-	
 	if(MyGetType(oldValue)= "string" and MyGetType(newValue)= "string"){
 		params.push([oldValue,newValue])
 	}
@@ -3613,39 +3589,59 @@ LButton & t::
 
 	;Msgbox,%tt%
 return
-            */
+        */
 
-            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-            ;;;第二段自定义部分结束
-            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ;;;第二段自定义部分结束
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-            ;;;以下为研究学习
-            ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-            ; LButton & s::
-            ; 	myData:= 123
-            ; 	if (myData is number)	
-            ; 	{
-            ; 		MsgBox,%myData% is number.
-            ; 	}
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ;;;以下为研究学习
+        ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+        ; LButton & s::
+        ; 	myData:= 123
+        ; 	if (myData is number)	
+        ; 	{
+        ; 		MsgBox,%myData% is number.
+        ; 	}
 
-            ; 	if (myData is integer)
-            ; 	{
-            ; 		MsgBox,%myData% is integer.
-            ; 	}
+        ; 	if (myData is integer)
+        ; 	{
+        ; 		MsgBox,%myData% is integer.
+        ; 	}
 
-            ; 	if (myData is alpha)
-            ; 	{
-            ; 		MsgBox,%myData% is string.
-            ; 	}
+        ; 	if (myData is alpha)
+        ; 	{
+        ; 		MsgBox,%myData% is string.
+        ; 	}
 
-            ; 	if (myData is space)
-            ; 	{
-            ; 		MsgBox,%myData% is space.
-            ; 	}
+        ; 	if (myData is space)
+        ; 	{
+        ; 		MsgBox,%myData% is space.
+        ; 	}
 
-            ; 	if (myData is time)
-            ; 	{
-            ; 		MsgBox,%myData% is datetime.
-            ; 	}
-            ; return
+        ; 	if (myData is time)
+        ; 	{
+        ; 		MsgBox,%myData% is datetime.
+        ; 	}
+        ; return
+
+        ;;;;鼠标手势研究
+/*
+rbutton::     
+  mousegetpos xpos1,ypos1
+  settimer,gtrack,1               
+  return
+  rbutton up::
+  settimer,gtrack,off           
+  msgbox,,,%gtrack%,1
+  gtrack=
+  return
+  gtrack:
+  mousegetpos xpos2,ypos2
+  track:=(abs(ypos1-ypos2)>=abs(xpos1-xpos2)) ? (ypos1>ypos2 ? "u" : "d") : (xpos1>xpos2 ? "l" : "r")
+  if (track<>SubStr(gtrack, 0, 1)) and (abs(ypos1-ypos2)>4 or abs(xpos1-xpos2)>4)
+     gtrack.=track
+  xpos1:=xpos2,ypos1:=ypos2
+  return
+        */

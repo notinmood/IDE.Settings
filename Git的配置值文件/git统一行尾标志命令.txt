@@ -1,0 +1,2 @@
+请使用管理员权限在cmd内运行以下命令（本命令的作用是不让git从服务器迁出的时候，把行尾标志lf改为crlf；迁入到时候从crlf改为lf；）。
+git config --globalcore.autocrlf false

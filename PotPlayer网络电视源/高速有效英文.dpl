@@ -1,0 +1,56 @@
+﻿DAUMPLAYLIST
+playname=https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8
+playtime=30041
+topindex=0
+saveplaypos=0
+1*file*https://cnn-cnninternational-1-de.samsung.wurl.com/manifest/playlist.m3u8
+1*title*CNN
+1*start*3846
+2*file*https://cnn-cnninternational-1-de.samsung.wurl.com/manifest/playlist.m3u8
+2*title*CNN 德国
+3*file*https://tve-live-lln.warnermediacdn.com/hls/live/586495/cnngo/cnn_slate/VIDEO_0_3564000.m3u8
+3*title*CNN USA
+4*file*https://cbsn-us.cbsnstream.cbsnews.com/out/v1/55a8648e8f134e82a470f83d562deeca/master.m3u8
+4*title*CBS News
+4*start*39452
+5*file*https://cbsn-la.cbsnstream.cbsnews.com/out/v1/57b6c4534a164accb6b1872b501e0028/master.m3u8
+5*title*CBS News Los Angeles (720p)
+5*author*News
+5*thumbnail*https://images.pluto.tv/channels/5dc481cda1d430000948a1b4/colorLogoPNG.png
+6*file*https://cbsn-mia.cbsnstream.cbsnews.com/out/v1/ac174b7938264d24ae27e56f6584bca0/master.m3u8
+6*title*CBS News Miami (720p)
+6*author*News
+6*thumbnail*https://images.pluto.tv/channels/60fb299b79498900070b29e0/colorLogoPNG.png
+7*file*http://source07.v.news.cn/live/CNC_EN/playlist.m3u8
+7*title*CNC
+8*file*http://39.134.115.163:8080/PLTV/88888910/224/3221225638/index.m3u8
+8*title*CCTV-13新闻 (1080p)
+8*author*News
+8*thumbnail*https://upload.wikimedia.org/wikipedia/zh/0/0b/CCTV-13_Logo.png
+9*file*http://live.cgtn.com/500/prog_index.m3u8
+9*title*CGTN (576p)
+9*author*News
+9*thumbnail*https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/CGTN.svg/512px-CGTN.svg.png
+10*file*https://livedoc.cgtn.com/1000d/prog_index.m3u8
+10*title*CGTN 纪录片
+11*file*http://www.alibabapictures.com/movies/10/mayunduihua.mp4
+11*title*马云对话 (480p)
+11*duration2*2277692
+11*author*Undefined
+11*start*1754122
+12*file*https://dwamdstream102.akamaized.net/hls/live/2015525/dwstream102/index.m3u8
+12*title*DW English 德国之声
+12*author*News
+12*thumbnail*https://i.imgur.com/A1xzjOI.png
+13*file*https://lnc-news12.tubi.video/index.m3u8
+13*title*News12
+14*file*https://live-hls-web-aje.getaj.net/AJE/index.m3u8
+14*title*ALJazeera
+15*file*https://fox-foxnewsnow-samsungus.amagi.tv/playlist.m3u8
+15*title*Fox News
+16*file*https://austchannel-live.akamaized.net/hls/live/2002736/austchannel-sport/master.m3u8
+16*title*Fox Sports
+17*file*https://moiptvhls-i.akamaihd.net/hls/live/652313/secure/master.m3u8
+17*title*ABN Dare To Dream
+18*file*https://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index.m3u8
+18*title*CNA
